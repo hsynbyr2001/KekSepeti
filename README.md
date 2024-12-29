@@ -41,13 +41,10 @@ Seçtiğin kek türünden kaç tane sipariş edeceğini seç.
 ### 3. Ekstra Malzemeleri Belirle
 Ekstra krema veya serpinti ekle.
 
-### 4. Ekstra Malzemeleri Belirle
-Ekstra krema veya serpinti ekle.
-
-### 5. Sipariş Detaylarını Gir
+### 4. Sipariş Detaylarını Gir
 Adını, sipariş adresini yaz.
 
-### 6. Sipariş Özetini İncele
+### 5. Sipariş Özetini İncele
 Sipariş detaylarını gözden geçir ve siparişi tamamla.
 
 ---
