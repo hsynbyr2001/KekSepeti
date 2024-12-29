@@ -1,8 +1,10 @@
-#  KekSepeti🧁
+# ![Logo](./keklogo.png) KekSepeti
 
 ## Giriş
 
 KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak Swift programlama dili ile oluşturulmuştur. 
+
+![Screenshot](./screenshot.png)
 
 ---
 
@@ -56,7 +58,10 @@ Bu uygulama app builder olarak SwiftUI kullanmaktadır.
 #### Komponentler
 Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir.
 
+#### Dark Mode & Light Mode
+Bu uygulama her iki mod için de uyumludur. Telefonun kendi ayarına göre otomatik dark veya light görünüm alır.
+
 #### URLSession ile sipariş verisini server'a gönderme
-Bu uygulama sipariş detaylarını barındıran JSON içeriğini https://reqres.in adresine URLSession ile POST .httpMethod'unu kullanarak gönderir. https://reqres.in AJAX isteklerine yanıt vermeye hazır barındırılan bir REST-API'dır ve frontend'i gerçek bir API'ye ile test etmeyi sağlar.'
+Bu uygulama sipariş detaylarını barındıran JSON içeriğini https://reqres.in adresine URLSession ile POST .httpMethod'unu kullanarak gönderir. https://reqres.in AJAX isteklerine yanıt vermeye hazır barındırılan bir REST-API'dır ve frontend'i gerçek bir API'ye ile test etmeyi sağlar.
 
 ---

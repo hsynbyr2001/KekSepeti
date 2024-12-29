@@ -17,6 +17,8 @@
 		BE3772EC2D21C219004ED2A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BE3772EB2D21C219004ED2A2 /* .gitignore */; };
 		BE3772EE2D21D0C8004ED2A2 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772ED2D21D0C8004ED2A2 /* ProductView.swift */; };
 		BE3772F12D21E34F004ED2A2 /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772F02D21E34F004ED2A2 /* CakeView.swift */; };
+		BE3772F62D21F86B004ED2A2 /* keklogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3772F52D21F86A004ED2A2 /* keklogo.png */; };
+		BE3772F82D21F87D004ED2A2 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3772F72D21F87D004ED2A2 /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BE3772ED2D21D0C8004ED2A2 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		BE3772F02D21E34F004ED2A2 /* CakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
 		BE3772F42D21EEC6004ED2A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE3772F52D21F86A004ED2A2 /* keklogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keklogo.png; sourceTree = "<group>"; };
+		BE3772F72D21F87D004ED2A2 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				BE3772E92D21C15C004ED2A2 /* Siparis.swift */,
 				BE3772E42D21C102004ED2A2 /* Views */,
 				BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */,
+				BE3772F52D21F86A004ED2A2 /* keklogo.png */,
+				BE3772F72D21F87D004ED2A2 /* screenshot.png */,
 				BE3772DC2D21C0EA004ED2A2 /* Preview Content */,
 			);
 			path = KekSepeti;
@@ -161,8 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3772F82D21F87D004ED2A2 /* screenshot.png in Resources */,
 				BE3772DE2D21C0EA004ED2A2 /* Preview Assets.xcassets in Resources */,
 				BE3772EC2D21C219004ED2A2 /* .gitignore in Resources */,
+				BE3772F62D21F86B004ED2A2 /* keklogo.png in Resources */,
 				BE3772DB2D21C0EA004ED2A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
