@@ -54,6 +54,8 @@
 			children = (
 				BE3772F42D21EEC6004ED2A2 /* README.md */,
 				BE3772EB2D21C219004ED2A2 /* .gitignore */,
+				BE3772F52D21F86A004ED2A2 /* keklogo.png */,
+				BE3772F72D21F87D004ED2A2 /* screenshot.png */,
 				BE3772D52D21C0E9004ED2A2 /* KekSepeti */,
 				BE3772D42D21C0E9004ED2A2 /* Products */,
 			);
@@ -75,8 +77,6 @@
 				BE3772E92D21C15C004ED2A2 /* Siparis.swift */,
 				BE3772E42D21C102004ED2A2 /* Views */,
 				BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */,
-				BE3772F52D21F86A004ED2A2 /* keklogo.png */,
-				BE3772F72D21F87D004ED2A2 /* screenshot.png */,
 				BE3772DC2D21C0EA004ED2A2 /* Preview Content */,
 			);
 			path = KekSepeti;
