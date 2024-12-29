@@ -11,11 +11,6 @@ KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak
 - [Projeyi Klonlamak](#projeyi-klonlamak)
 - [Derleme ve Çalıştırma](#derleme-ve-çalıştırma)
 - [Teknik Detaylar](#teknik-detaylar)
-  - [Oluşturma](#oluşturma) 
-  - [Sıralama](#sıralama)
-  - [Arama](#arama)
-  - [Düzenleme](#düzenleme)
-  - [Silme](#silme)
 
 
 ## Projeyi Klonlamak
