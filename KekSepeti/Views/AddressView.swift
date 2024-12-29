@@ -15,8 +15,8 @@ struct AddressView: View {
         Form {
             Section {
                 TextField("İsim", text: $order.name)
-                TextField("Sokak", text: $order.streetAddress)
-                TextField("Şehit", text: $order.city)
+                TextField("Mahalle", text: $order.streetAddress)
+                TextField("Şehir", text: $order.city)
                 TextField("Posta Kodu", text: $order.zip)
             }
             

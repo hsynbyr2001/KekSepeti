@@ -15,6 +15,8 @@
 		BE3772E82D21C147004ED2A2 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772E72D21C147004ED2A2 /* CheckOutView.swift */; };
 		BE3772EA2D21C15C004ED2A2 /* Siparis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772E92D21C15C004ED2A2 /* Siparis.swift */; };
 		BE3772EC2D21C219004ED2A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BE3772EB2D21C219004ED2A2 /* .gitignore */; };
+		BE3772EE2D21D0C8004ED2A2 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772ED2D21D0C8004ED2A2 /* ProductView.swift */; };
+		BE3772F12D21E34F004ED2A2 /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772F02D21E34F004ED2A2 /* CakeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		BE3772E72D21C147004ED2A2 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		BE3772E92D21C15C004ED2A2 /* Siparis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siparis.swift; sourceTree = "<group>"; };
 		BE3772EB2D21C219004ED2A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BE3772ED2D21D0C8004ED2A2 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		BE3772F02D21E34F004ED2A2 /* CakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
+		BE3772F42D21EEC6004ED2A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 		BE3772CA2D21C0E9004ED2A2 = {
 			isa = PBXGroup;
 			children = (
+				BE3772F42D21EEC6004ED2A2 /* README.md */,
 				BE3772EB2D21C219004ED2A2 /* .gitignore */,
 				BE3772D52D21C0E9004ED2A2 /* KekSepeti */,
 				BE3772D42D21C0E9004ED2A2 /* Products */,
@@ -60,9 +66,10 @@
 		BE3772D52D21C0E9004ED2A2 /* KekSepeti */ = {
 			isa = PBXGroup;
 			children = (
-				BE3772E42D21C102004ED2A2 /* Views */,
 				BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */,
+				BE3772D82D21C0E9004ED2A2 /* ContentView.swift */,
 				BE3772E92D21C15C004ED2A2 /* Siparis.swift */,
+				BE3772E42D21C102004ED2A2 /* Views */,
 				BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */,
 				BE3772DC2D21C0EA004ED2A2 /* Preview Content */,
 			);
@@ -80,11 +87,20 @@
 		BE3772E42D21C102004ED2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE3772D82D21C0E9004ED2A2 /* ContentView.swift */,
+				BE3772EF2D21E330004ED2A2 /* CheckOutView */,
 				BE3772E52D21C112004ED2A2 /* AddressView.swift */,
-				BE3772E72D21C147004ED2A2 /* CheckOutView.swift */,
+				BE3772F02D21E34F004ED2A2 /* CakeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BE3772EF2D21E330004ED2A2 /* CheckOutView */ = {
+			isa = PBXGroup;
+			children = (
+				BE3772E72D21C147004ED2A2 /* CheckOutView.swift */,
+				BE3772ED2D21D0C8004ED2A2 /* ProductView.swift */,
+			);
+			path = CheckOutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +177,9 @@
 				BE3772D92D21C0E9004ED2A2 /* ContentView.swift in Sources */,
 				BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */,
 				BE3772EA2D21C15C004ED2A2 /* Siparis.swift in Sources */,
+				BE3772F12D21E34F004ED2A2 /* CakeView.swift in Sources */,
 				BE3772E82D21C147004ED2A2 /* CheckOutView.swift in Sources */,
+				BE3772EE2D21D0C8004ED2A2 /* ProductView.swift in Sources */,
 				BE3772E62D21C112004ED2A2 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

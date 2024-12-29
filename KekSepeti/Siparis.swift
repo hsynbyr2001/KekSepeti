@@ -21,7 +21,7 @@ class Siparis: Codable {
         case _zip = "zip"
     }
     
-    static let types = ["Vanilyalı", "Çilekli", "Çikolatalı", "Gökkuşağı"]
+    static let types = ["🍦 Vanilyalı", "🍓 Çilekli", "🍫 Çikolatalı", "🌈 Gökkuşağı"]
     
     var type = 0
     var quantity = 3
@@ -51,10 +51,21 @@ class Siparis: Codable {
         return true
     }
     
-    var cost: Decimal {
-        var cost = Decimal(quantity) * 2
+    static let prices: [Decimal] = {
+        var prices: [Decimal] = []
         
-        cost += Decimal(type) / 2
+        for i in types.indices {
+            prices.append(Decimal((i + 1)) * 2)
+        }
+        return prices
+    }()
+    
+    var total: Decimal {
+        Siparis.prices[type] * Decimal(quantity)
+    }
+    
+    var cost: Decimal {
+        var cost = total
         
         if extraFrosting {
             cost += Decimal(quantity)
