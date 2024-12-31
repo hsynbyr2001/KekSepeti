@@ -11,7 +11,7 @@ import SwiftUI
 struct KekSepetiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StoreListView()
         }
     }
 }

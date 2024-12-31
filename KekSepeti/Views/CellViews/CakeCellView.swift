@@ -22,7 +22,6 @@ struct CakeCellView: View {
             Stepper("\(cake.quantity)", value: $cake.quantity, in: 1...20)
                 .labelsHidden()
         }
-        
     }
 }
 

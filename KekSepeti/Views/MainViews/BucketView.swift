@@ -33,7 +33,6 @@ struct BucketView: View {
                     Text("\(bucket.total, format: .currency(code: "TRY"))")
                         .font(.title)
                 }
-                
                 NavigationLink("Sepeti Onayla") {
                     AddressView(bucket: bucket, profile: profile)
                 }
@@ -42,7 +41,6 @@ struct BucketView: View {
             .navigationTitle("Sepetim")
         }
     }
-    
     func deleteProduct(at offsets: IndexSet) {
         bucket.products.remove(atOffsets: offsets)
     }

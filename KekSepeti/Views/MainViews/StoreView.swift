@@ -19,11 +19,12 @@ struct StoreView: View {
                 Section("Hakkında") {
                     Text("\(store.address), \(store.rating, format: .number)")
                         .font(.subheadline)
-                    
                 }
                 Section("Kekler") {
                     ForEach(store.products.indices, id: \.self) { indexPath in
-                        NavigationLink("\(store.products[indexPath].name)") {
+                        let product = store.products[indexPath]
+                        
+                        NavigationLink("\(product.name), \(product.cost, format: .currency(code: "TRY"))") {
                             CakeDetailView(cake: store.products[indexPath], bucket: bucket, indexPath: indexPath)
                         }
                     }

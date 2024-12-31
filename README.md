@@ -10,10 +10,19 @@ KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak
 
 ## İçindekiler
 - [Giriş](#giriş)
+- [Sistem Gereksinimleri](#sistem-gereksinimleri)
 - [Projeyi Klonlamak](#projeyi-klonlamak)
 - [Derleme ve Çalıştırma](#derleme-ve-çalıştırma)
 - [Teknik Detaylar](#teknik-detaylar)
 
+---
+
+## Sistem Gereksinimleri
+- iOS 17.0+
+- Xcode 15.3+
+- Swift 5.0+
+
+---
 
 ## Projeyi Klonlamak
 
@@ -34,7 +43,11 @@ Projeyi indirdikten sonra Xcode ile açarak ister simulator ile ister fiziksel b
 ---
 
 ## Nasıl Kullanılır?
-### 1. Kek Türünü Seç
+
+### 1. Kek Mağazası Seç
+Farklı türlerde kek satan mağazalardan birini seç. 
+
+### 2. Kek Türünü Seç
 Vanilyalı, çilekli, çikolatalı veya gökkuşağı keklerinden birini seç. 
 
 ### 2. Kek Adedini Belirle
@@ -43,11 +56,17 @@ Seçtiğin kek türünden kaç tane sipariş edeceğini seç.
 ### 3. Ekstra Malzemeleri Belirle
 Ekstra krema veya serpinti ekle.
 
+### 4. Sepeti Gözden Geçit
+Ürünleri, tutarı incele ve onayla.
+
 ### 4. Sipariş Detaylarını Gir
 Adını, sipariş adresini yaz.
 
 ### 5. Sipariş Özetini İncele
 Sipariş detaylarını gözden geçir ve siparişi tamamla.
+
+### 4. Sipariş Durumunu İncele
+Siparişi oluşturduktan sonra durumunu takip et. (Hazırlanıyor, yolda, teslim edildi)
 
 ---
 
@@ -60,8 +79,5 @@ Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, Scroll
 
 #### Dark Mode & Light Mode
 Bu uygulama her iki mod için de uyumludur. Telefonun kendi ayarına göre otomatik dark veya light görünüm alır.
-
-#### URLSession ile sipariş verisini server'a gönderme
-Bu uygulama sipariş detaylarını barındıran JSON içeriğini https://reqres.in adresine URLSession ile POST .httpMethod'unu kullanarak gönderir. https://reqres.in AJAX isteklerine yanıt vermeye hazır barındırılan bir REST-API'dır ve frontend'i gerçek bir API'ye ile test etmeyi sağlar.
 
 ---

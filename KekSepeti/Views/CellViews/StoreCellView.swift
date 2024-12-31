@@ -24,7 +24,6 @@ struct StoreCellView: View {
                     .foregroundStyle(.secondary)
             }
         }
-        
     }
 }
 

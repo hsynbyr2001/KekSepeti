@@ -16,7 +16,6 @@ struct CakeDetailView: View {
     var indexPath: Int
     
     var body: some View {
-        
         NavigationStack {
             List {
                 Section("Hakkında") {

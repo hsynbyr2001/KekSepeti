@@ -20,12 +20,10 @@ struct AddressView: View {
                 TextField("Şehir", text: $profile.city)
                 TextField("Posta Kodu", text: $profile.zip)
             }
-            
             Section("Beni hatırla") {
                 Toggle("Bilgiler kayıtlı kalsın mı?", isOn: $profile.isRememberMeOn)
             }
             .disabled(!profile.hasValidAddress)
-            
             Section {
                 NavigationLink("Adresi Onayla") {
                     CheckoutView(bucket: bucket, profile: profile)

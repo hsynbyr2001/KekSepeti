@@ -38,7 +38,6 @@ struct StoreListView: View {
             }
             .onAppear {
                 let defaults = UserDefaults.standard
-                
                 do {
                     if let savedData = defaults.data(forKey: "profile") {
                         let decodedObject = try JSONDecoder().decode(Profile.self, from: savedData)
