@@ -20,13 +20,19 @@ struct StoreCellView: View {
             VStack(alignment: .leading) {
                 Text("\(store.name)")
                     .font(.title2)
+                    .bold()
+                    .lineLimit(1)
+                Text("\(store.address)")
+                    .font(.subheadline)
                 Label("\(store.rating, format: .number)", systemImage: "star.fill")
+                    .font(.footnote)
                     .foregroundStyle(.secondary)
             }
         }
+        .frame(height: 70)
     }
 }
 
 #Preview {
-    StoreCellView(store: Store(rating: 1.0, address: "", image: "pelin", products: []))
+    StoreCellView(store: Store(name: "Pelin's Cakes", rating: 1.0, address: "Nişantaşı, İstanbul", image: "pelin", products: []))
 }

@@ -13,6 +13,7 @@ KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak
 - [Sistem Gereksinimleri](#sistem-gereksinimleri)
 - [Projeyi Klonlamak](#projeyi-klonlamak)
 - [Derleme ve Çalıştırma](#derleme-ve-çalıştırma)
+- [Nasıl Kullanılır](#nasıl-kullanılır?)
 - [Teknik Detaylar](#teknik-detaylar)
 
 ---
@@ -76,6 +77,9 @@ Bu uygulama app builder olarak SwiftUI kullanmaktadır.
 
 #### Komponentler
 Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir.
+
+#### Kullanıcı Profili
+Bu uygulama içerisinde bulunan Profile class'ını JSON encoder, decoder ve UserDefaults aracılığıyla kaydeder ve gerektiğinde veri tabanından kullanır.
 
 #### Dark Mode & Light Mode
 Bu uygulama her iki mod için de uyumludur. Telefonun kendi ayarına göre otomatik dark veya light görünüm alır.

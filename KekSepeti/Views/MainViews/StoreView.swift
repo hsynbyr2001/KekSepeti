@@ -13,6 +13,11 @@ struct StoreView: View {
     @State var bucket: Bucket
     @State var profile: Profile
     
+    let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -21,13 +26,18 @@ struct StoreView: View {
                         .font(.subheadline)
                 }
                 Section("Kekler") {
-                    ForEach(store.products.indices, id: \.self) { indexPath in
-                        let product = store.products[indexPath]
-                        
-                        NavigationLink("\(product.name), \(product.cost, format: .currency(code: "TRY"))") {
-                            CakeDetailView(cake: store.products[indexPath], bucket: bucket, indexPath: indexPath)
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(store.products.indices, id: \.self) { indexPath in
+                                let product = store.products[indexPath]
+                                
+                                NavigationLink(destination: CakeDetailView(cake: store.products[indexPath], bucket: bucket, indexPath: indexPath)) {
+                                    CakeRowView(product: product)
+                                }
+                            }
                         }
                     }
+                    .padding(.top)
                 }
             }
             .navigationTitle("\(store.name)")

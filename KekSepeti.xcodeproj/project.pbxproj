@@ -10,6 +10,7 @@
 		BE1468A02D235B5500E0EBFB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE14689F2D235B5500E0EBFB /* Profile.swift */; };
 		BE1468A22D2373AA00E0EBFB /* OrderTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */; };
 		BE1468A42D2387B400E0EBFB /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1468A32D2387B400E0EBFB /* StoreCellView.swift */; };
+		BE2B77C82D24750F008D8F04 /* CakeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2B77C72D24750F008D8F04 /* CakeRowView.swift */; };
 		BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */; };
 		BE3772DB2D21C0EA004ED2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */; };
 		BE3772DE2D21C0EA004ED2A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3772DD2D21C0EA004ED2A2 /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		BE14689F2D235B5500E0EBFB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingView.swift; sourceTree = "<group>"; };
 		BE1468A32D2387B400E0EBFB /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
+		BE2B77C72D24750F008D8F04 /* CakeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeRowView.swift; sourceTree = "<group>"; };
 		BE3772D32D21C0E9004ED2A2 /* KekSepeti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KekSepeti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiApp.swift; sourceTree = "<group>"; };
 		BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				BE1468A32D2387B400E0EBFB /* StoreCellView.swift */,
 				BE3772ED2D21D0C8004ED2A2 /* CakeCellView.swift */,
+				BE2B77C72D24750F008D8F04 /* CakeRowView.swift */,
 			);
 			path = CellViews;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */,
 				BE8F5EBE2D23077300FE45EA /* StoreView.swift in Sources */,
+				BE2B77C82D24750F008D8F04 /* CakeRowView.swift in Sources */,
 				BE8F5EC02D2308A200FE45EA /* Store.swift in Sources */,
 				BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */,
 				BE3772EA2D21C15C004ED2A2 /* Order.swift in Sources */,
