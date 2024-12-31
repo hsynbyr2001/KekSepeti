@@ -50,22 +50,22 @@ Farklı türlerde kek satan mağazalardan birini seç.
 ### 2. Kek Türünü Seç
 Vanilyalı, çilekli, çikolatalı veya gökkuşağı keklerinden birini seç. 
 
-### 2. Kek Adedini Belirle
+### 3. Kek Adedini Belirle
 Seçtiğin kek türünden kaç tane sipariş edeceğini seç.
 
-### 3. Ekstra Malzemeleri Belirle
+### 4. Ekstra Malzemeleri Belirle
 Ekstra krema veya serpinti ekle.
 
-### 4. Sepeti Gözden Geçit
+### 5. Sepeti Gözden Geçit
 Ürünleri, tutarı incele ve onayla.
 
-### 4. Sipariş Detaylarını Gir
+### 6. Sipariş Detaylarını Gir
 Adını, sipariş adresini yaz.
 
-### 5. Sipariş Özetini İncele
+### 7. Sipariş Özetini İncele
 Sipariş detaylarını gözden geçir ve siparişi tamamla.
 
-### 4. Sipariş Durumunu İncele
+### 8. Sipariş Durumunu İncele
 Siparişi oluşturduktan sonra durumunu takip et. (Hazırlanıyor, yolda, teslim edildi)
 
 ---
