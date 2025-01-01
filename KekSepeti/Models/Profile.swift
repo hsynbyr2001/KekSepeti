@@ -15,6 +15,8 @@ class Profile: Codable {
     var zip: String
     var isRememberMeOn = false
     
+    let cities = ["İstanbul", "İzmir", "Ankara"]
+    
     init() {
         self.name = ""
         self.area = ""
