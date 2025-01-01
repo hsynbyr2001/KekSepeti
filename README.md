@@ -76,7 +76,7 @@ Siparişi oluşturduktan sonra durumunu takip et. (Hazırlanıyor, yolda, teslim
 Bu uygulama app builder olarak SwiftUI kullanmaktadır.
 
 #### Komponentler
-Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir.
+Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir. Adres sayfasında MapKit kullanılmıştır.
 
 #### Kullanıcı Profili
 Bu uygulama içerisinde bulunan Profile class'ını JSON encoder, decoder ve UserDefaults aracılığıyla kaydeder ve gerektiğinde veri tabanından kullanır.

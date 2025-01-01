@@ -6,8 +6,17 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct OrderTrackingView: View {
+    
+    var profile: Profile
+    @State var position = MapCameraPosition.region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 41.015137, longitude: 28.979530),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+    )
     
     enum OrderStatus {
         case preparing
@@ -23,22 +32,25 @@ struct OrderTrackingView: View {
     @State private var orderStatusText = "🧁 Siparişiniz Hazırlanıyor"
     
     var body: some View {
+        Map(position: $position)
         NavigationStack {
             HStack {
                 ProgressView(value: timeRemainingForPreparing, total: 20)
                 ProgressView(value: timeRemainingForDelivery, total: 20)
             }
-            .padding()
+            .padding([.bottom, .leading, .trailing])
             Text(orderStatusText)
                 .font(.title)
                 .bold()
                 .opacity(show ? 1 : 0)
             
         }
+        .frame(height: 160)
         .onAppear {
             if orderStatus != .delivered {
                 startTimer()
             }
+            setMapPosition()
         }
         .navigationBarBackButtonHidden(true)
     }
@@ -77,8 +89,35 @@ struct OrderTrackingView: View {
             }
         }
     }
+    
+    func setMapPosition() {
+        
+        var lat: CLLocationDegrees = 41.015137
+        var long: CLLocationDegrees = 28.979530
+        
+        switch profile.city {
+        case "İstanbul":
+            long = 41.015137
+            lat = 28.979530
+        case "Ankara":
+            long = 39.925470
+            lat = 32.866277
+        case "İzmir":
+            long = 38.422401
+            lat = 27.150428
+        default:
+            break
+        }
+        
+        position = MapCameraPosition.region(
+            MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: long, longitude: lat),
+                span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            )
+        )
+    }
 }
 
 #Preview {
-    OrderTrackingView()
+    OrderTrackingView(profile: Profile())
 }

@@ -21,7 +21,7 @@ struct CheckoutView: View {
     
     var body: some View {
         
-        var canOrder = NSDecimalNumber(decimal: bucket.total).floatValue >= minimumTotal ? true : false
+        let canOrder = NSDecimalNumber(decimal: bucket.total).floatValue >= minimumTotal ? true : false
         
         NavigationStack{
             Form {
@@ -60,7 +60,7 @@ struct CheckoutView: View {
                             .foregroundStyle(.red)
                     }
                     NavigationLink("Sipariş Ver") {
-                        OrderTrackingView()
+                        OrderTrackingView(profile: profile)
                     }
                     .disabled(!canOrder)
                 }
