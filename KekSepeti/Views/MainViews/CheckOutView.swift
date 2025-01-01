@@ -84,10 +84,6 @@ struct CheckoutView: View {
             .scrollBounceBehavior(.basedOnSize)
         }
     }
-    
-    func placeOrder() {
-        
-    }
 }
 
 #Preview {

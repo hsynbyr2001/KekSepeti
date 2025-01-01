@@ -41,11 +41,19 @@ struct CakeDetailView: View {
                     }
                 }
                 Button {
-                    if bucket.products.indices.contains(indexPath) && bucket.products[indexPath].type == cake.type {
-                        bucket.products[indexPath] = cake
-                        print("Ürün zaten sepete eklenmiş. Ürün güncellendi.")
+                    
+                    var isContaining = false
+                    
+                    for (index, product) in bucket.products.enumerated() {
+                        if product.type == cake.type {
+                            bucket.products[index] = cake
+                            isContaining = true
+                            print("Ürün zaten sepete eklenmiş. Ürün güncellendi.")
+                            break
+                        }
                     }
-                    else {
+                    
+                    if !isContaining {
                         bucket.products.append(cake)
                         print("Ürün sepete eklendi.")
                     }
