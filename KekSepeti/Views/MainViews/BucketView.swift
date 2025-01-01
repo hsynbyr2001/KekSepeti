@@ -35,6 +35,7 @@ struct BucketView: View {
                 }
                 NavigationLink("Sepeti Onayla") {
                     AddressView(bucket: bucket, profile: profile)
+                        .toolbar(.hidden, for: .navigationBar)
                 }
                 .disabled(bucket.products.isEmpty)
             }

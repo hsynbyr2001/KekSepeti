@@ -61,6 +61,7 @@ struct CheckoutView: View {
                     }
                     NavigationLink("Sipariş Ver") {
                         OrderTrackingView(profile: profile)
+                            .toolbar(.hidden, for: .navigationBar)
                     }
                     .disabled(!canOrder)
                 }

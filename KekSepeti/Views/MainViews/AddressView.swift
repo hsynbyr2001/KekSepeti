@@ -58,16 +58,13 @@ struct AddressView: View {
             }
             .disabled(!profile.hasValidAddress)
         }
-        .onAppear {
-            setMapPosition()
-        }
         .navigationBarBackButtonHidden(true)
     }
     
     func setMapPosition() {
         
-        var lat: CLLocationDegrees = 0
-        var long: CLLocationDegrees = 0
+        var lat: CLLocationDegrees = 28.979530
+        var long: CLLocationDegrees = 41.015137
         
         switch profile.city {
         case "İstanbul":

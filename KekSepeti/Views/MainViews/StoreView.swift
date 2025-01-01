@@ -25,6 +25,12 @@ struct StoreView: View {
                     Text("\(store.address), \(store.rating, format: .number)")
                         .font(.subheadline)
                 }
+                Section("Değerlendirmeler") {
+                    ScrollView {
+                        UsersView()
+                            .frame(height: 190)
+                    }
+                }
                 Section("Kekler") {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {

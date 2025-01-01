@@ -1,10 +1,10 @@
-# ![Logo](./keklogo.png) KekSepeti
+# ![Logo](./gitimages/keklogo.png) KekSepeti
 
 ## Giriş
 
 KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak Swift programlama dili ile oluşturulmuştur. 
 
-![Screenshot](./screenshot.png)
+![Screenshot](./gitimages/ss1.png)
 
 ---
 
@@ -14,6 +14,7 @@ KekSepeti bir iOS uygulamasıdır. Xcode IDE'si üzerinden SwiftUI kullanılarak
 - [Projeyi Klonlamak](#projeyi-klonlamak)
 - [Derleme ve Çalıştırma](#derleme-ve-çalıştırma)
 - [Nasıl Kullanılır](#nasıl-kullanılır?)
+- [Random User Generator API](#random-user-generator-api)
 - [Teknik Detaylar](#teknik-detaylar)
 
 ---
@@ -46,28 +47,40 @@ Projeyi indirdikten sonra Xcode ile açarak ister simulator ile ister fiziksel b
 ## Nasıl Kullanılır?
 
 ### 1. Kek Mağazası Seç
-Farklı türlerde kek satan mağazalardan birini seç. 
+Farklı türlerde kek satan mağazalardan birini seç.
 
-### 2. Kek Türünü Seç
+![Screenshot](./gitimages/ss2.png)
+
+### 2. Kek Türünü ve Adedini Belirle
 Vanilyalı, çilekli, çikolatalı veya gökkuşağı keklerinden birini seç. 
 
-### 3. Kek Adedini Belirle
-Seçtiğin kek türünden kaç tane sipariş edeceğini seç.
-
-### 4. Ekstra Malzemeleri Belirle
+### 3. Ekstra Malzemeleri Belirle
 Ekstra krema veya serpinti ekle.
 
-### 5. Sepeti Gözden Geçit
+![Screenshot](./gitimages/ss3.png)
+
+### 4. Sepeti Gözden Geçir
 Ürünleri, tutarı incele ve onayla.
 
-### 6. Sipariş Detaylarını Gir
+![Screenshot](./gitimages/ss4.png)
+
+### 5. Sipariş Detaylarını Gir
 Adını, sipariş adresini yaz.
 
-### 7. Sipariş Özetini İncele
+![Screenshot](./gitimages/ss5.png)
+
+### 6. Sipariş Özetini İncele
 Sipariş detaylarını gözden geçir ve siparişi tamamla.
 
-### 8. Sipariş Durumunu İncele
+### 7. Sipariş Durumunu İncele
 Siparişi oluşturduktan sonra durumunu takip et. (Hazırlanıyor, yolda, teslim edildi)
+
+![Screenshot](./gitimages/ss6.png)
+
+---
+
+## Random User Generator API
+https://randomuser.me random kullanıcı verisi gönderen ücretsiz bir API'dır. Bu uygulamada bulunan kek mağazalarının değerlendirmelerinde gözüken kullanıcılar https://randomuser.me/api API hizmetinden alınarak görüntülenmiştir.
 
 ---
 
@@ -83,5 +96,3 @@ Bu uygulama içerisinde bulunan Profile class'ını JSON encoder, decoder ve Use
 
 #### Dark Mode & Light Mode
 Bu uygulama her iki mod için de uyumludur. Telefonun kendi ayarına göre otomatik dark veya light görünüm alır.
-
----

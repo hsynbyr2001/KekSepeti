@@ -30,6 +30,19 @@ struct CakeRowView: View {
         .padding()
         .background(.secondary)
         .clipShape(.rect(cornerRadius: 10))
+        .overlay(
+            Circle()
+                .fill(.red)
+                .frame(width: 30, height: 30)
+                .padding(5)
+                .overlay(
+                    Text(product.quantity > 1 ? "\(product.quantity)" : "+")
+                        .bold()
+                        .foregroundStyle(.white)
+                )
+            ,
+            alignment: .topTrailing
+        )
     }
 }
 
