@@ -15,6 +15,8 @@
 		BE0C33A22D259C03001D16C8 /* ss5.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339C2D259C03001D16C8 /* ss5.png */; };
 		BE0C33A42D259C03001D16C8 /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339E2D259C03001D16C8 /* ss2.png */; };
 		BE0C33A52D259C03001D16C8 /* ss3.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339F2D259C03001D16C8 /* ss3.png */; };
+		BE0C33A72D259F87001D16C8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33A62D259F87001D16C8 /* AboutView.swift */; };
+		BE0C33AD2D25A99F001D16C8 /* AppStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33AC2D25A99F001D16C8 /* AppStoreView.swift */; };
 		BE1468A02D235B5500E0EBFB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE14689F2D235B5500E0EBFB /* Profile.swift */; };
 		BE1468A22D2373AA00E0EBFB /* OrderTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */; };
 		BE1468A42D2387B400E0EBFB /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1468A32D2387B400E0EBFB /* StoreCellView.swift */; };
@@ -48,6 +50,8 @@
 		BE0C339C2D259C03001D16C8 /* ss5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss5.png; sourceTree = "<group>"; };
 		BE0C339E2D259C03001D16C8 /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 		BE0C339F2D259C03001D16C8 /* ss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss3.png; sourceTree = "<group>"; };
+		BE0C33A62D259F87001D16C8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BE0C33AC2D25A99F001D16C8 /* AppStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreView.swift; sourceTree = "<group>"; };
 		BE14689F2D235B5500E0EBFB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingView.swift; sourceTree = "<group>"; };
 		BE1468A32D2387B400E0EBFB /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				BE3772E72D21C147004ED2A2 /* CheckOutView.swift */,
 				BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */,
 				BE0C33952D2582BF001D16C8 /* UsersView.swift */,
+				BE0C33A62D259F87001D16C8 /* AboutView.swift */,
+				BE0C33AC2D25A99F001D16C8 /* AppStoreView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */,
+				BE0C33A72D259F87001D16C8 /* AboutView.swift in Sources */,
+				BE0C33AD2D25A99F001D16C8 /* AppStoreView.swift in Sources */,
 				BE8F5EBE2D23077300FE45EA /* StoreView.swift in Sources */,
 				BE2B77C82D24750F008D8F04 /* CakeRowView.swift in Sources */,
 				BE0C33982D258AF2001D16C8 /* UserCellView.swift in Sources */,

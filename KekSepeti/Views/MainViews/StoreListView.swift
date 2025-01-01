@@ -22,6 +22,9 @@ struct StoreListView: View {
                         }
                     }
                 }
+                NavigationLink("Hakkında") {
+                    AboutView()
+                }
             }
             .navigationTitle("KekSepeti🧁")
             .toolbar {
