@@ -14,33 +14,37 @@ struct StoreListView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                Section("Mağazalar") {
-                    ForEach(stores.indices, id: \.self) { indexPath in
-                        NavigationLink(destination: StoreView(store: stores[indexPath], bucket: bucket, profile: profile)) {
-                            StoreCellView(store: stores[indexPath])
+            ZStack {
+                List {
+                    Section("Mağazalar") {
+                        ForEach(stores.indices, id: \.self) { indexPath in
+                            NavigationLink(destination: StoreView(store: stores[indexPath], bucket: bucket, profile: profile)) {
+                                StoreCellView(store: stores[indexPath])
+                            }
+                        }
+                    }
+                    NavigationLink("Hakkında") {
+                        AboutView()
+                    }
+                }
+                .navigationTitle("KekSepeti🧁")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NavigationLink(destination: BucketView(bucket: bucket, profile: profile)) {
+                            Text("🛒 \(bucket.products.count)")
+                                .font(.headline)
+                                .bold()
+                                .padding(6)
+                                .background(.secondary)
+                                .clipShape(.rect(cornerRadius: 6))
                         }
                     }
                 }
-                NavigationLink("Hakkında") {
-                    AboutView()
+                .onAppear {
+                    loadProfile()
                 }
-            }
-            .navigationTitle("KekSepeti🧁")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink(destination: BucketView(bucket: bucket, profile: profile)) {
-                        Text("🛒 \(bucket.products.count)")
-                            .font(.headline)
-                            .bold()
-                            .padding(6)
-                            .background(.secondary)
-                            .clipShape(.rect(cornerRadius: 6))
-                    }
-                }
-            }
-            .onAppear {
-                loadProfile()
+                SnowView()
+                    .allowsHitTesting(false)
             }
         }
     }

@@ -31,6 +31,10 @@
 		BE3772F82D21F87D004ED2A2 /* ss1.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3772F72D21F87D004ED2A2 /* ss1.png */; };
 		BE37AB292D261A16005C018E /* KekSepetiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37AB282D261A16005C018E /* KekSepetiTests.swift */; };
 		BE37AB302D261A7C005C018E /* FeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37AB2F2D261A7C005C018E /* FeatureTests.swift */; };
+		BE71768E2D261FA10087770F /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71768D2D261FA10087770F /* SnowView.swift */; };
+		BE7176902D2620090087770F /* SnowSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71768F2D2620090087770F /* SnowSprite.swift */; };
+		BE7176932D2620D20087770F /* Snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE7176912D2620D20087770F /* Snow.sks */; };
+		BE7176942D2620D20087770F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE7176922D2620D20087770F /* Assets.xcassets */; };
 		BE8F5EBE2D23077300FE45EA /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EBD2D23077300FE45EA /* StoreView.swift */; };
 		BE8F5EC02D2308A200FE45EA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EBF2D2308A200FE45EA /* Store.swift */; };
 		BE8F5EC22D2309B800FE45EA /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EC12D2309B800FE45EA /* Cake.swift */; };
@@ -79,6 +83,10 @@
 		BE37AB262D261A16005C018E /* KekSepetiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KekSepetiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE37AB282D261A16005C018E /* KekSepetiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiTests.swift; sourceTree = "<group>"; };
 		BE37AB2F2D261A7C005C018E /* FeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTests.swift; sourceTree = "<group>"; };
+		BE71768D2D261FA10087770F /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
+		BE71768F2D2620090087770F /* SnowSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowSprite.swift; sourceTree = "<group>"; };
+		BE7176912D2620D20087770F /* Snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Snow.sks; sourceTree = "<group>"; };
+		BE7176922D2620D20087770F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE8F5EBD2D23077300FE45EA /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		BE8F5EBF2D2308A200FE45EA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BE8F5EC12D2309B800FE45EA /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		BE3772E42D21C102004ED2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE7176952D26249C0087770F /* SpriteKit */,
 				BE2B77C52D246124008D8F04 /* MainViews */,
 				BE2B77C42D246112008D8F04 /* CellViews */,
 			);
@@ -218,6 +227,17 @@
 				BE37AB2F2D261A7C005C018E /* FeatureTests.swift */,
 			);
 			path = KekSepetiTests;
+			sourceTree = "<group>";
+		};
+		BE7176952D26249C0087770F /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				BE71768D2D261FA10087770F /* SnowView.swift */,
+				BE71768F2D2620090087770F /* SnowSprite.swift */,
+				BE7176912D2620D20087770F /* Snow.sks */,
+				BE7176922D2620D20087770F /* Assets.xcassets */,
+			);
+			path = SpriteKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +331,8 @@
 				BE3772F62D21F86B004ED2A2 /* keklogo.png in Resources */,
 				BE3772DB2D21C0EA004ED2A2 /* Assets.xcassets in Resources */,
 				BE0C33A52D259C03001D16C8 /* ss3.png in Resources */,
+				BE7176932D2620D20087770F /* Snow.sks in Resources */,
+				BE7176942D2620D20087770F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +352,7 @@
 			files = (
 				BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */,
 				BE0C33A72D259F87001D16C8 /* AboutView.swift in Sources */,
+				BE71768E2D261FA10087770F /* SnowView.swift in Sources */,
 				BE8F5EBE2D23077300FE45EA /* StoreView.swift in Sources */,
 				BE2B77C82D24750F008D8F04 /* CakeRowView.swift in Sources */,
 				BE0C33982D258AF2001D16C8 /* UserCellView.swift in Sources */,
@@ -344,6 +367,7 @@
 				BE8F5EC22D2309B800FE45EA /* Cake.swift in Sources */,
 				BE1468A42D2387B400E0EBFB /* StoreCellView.swift in Sources */,
 				BE0C33962D2582BF001D16C8 /* UsersView.swift in Sources */,
+				BE7176902D2620090087770F /* SnowSprite.swift in Sources */,
 				BE0C33922D2581DB001D16C8 /* User.swift in Sources */,
 				BE8F5EC82D23122A00FE45EA /* StoreListView.swift in Sources */,
 				BE3772EE2D21D0C8004ED2A2 /* CakeCellView.swift in Sources */,

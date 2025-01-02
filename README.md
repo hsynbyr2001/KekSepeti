@@ -88,6 +88,9 @@ https://randomuser.me random kullanıcı verisi gönderen ücretsiz bir API'dır
 ### App Builder: SwiftUI
 Bu uygulama app builder olarak SwiftUI kullanmaktadır.
 
+#### SpriteKit
+Uygulamada bulunan görsel efektler SpriteKit ile oluşturulmuştur. Yakında interaktif oyunlar da eklenecektir.
+
 #### Komponentler
 Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir. Adres sayfasında MapKit kullanılmıştır.
 
