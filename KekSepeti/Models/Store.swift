@@ -15,7 +15,6 @@ class Store {
     var address: String
     var image: String
     
-    // Products
     var products: [Cake] = []
     
     init(name: String = "", rating: Double, address: String, image: String, products: [Cake]) {
