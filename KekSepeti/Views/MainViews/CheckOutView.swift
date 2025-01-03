@@ -11,13 +11,10 @@ struct CheckoutView: View {
     
     var bucket: Bucket
     var profile: Profile
-    
-    @State private var leftAtDoor = false
-    
-    private let paymentTypes = ["Online Kredi Kartı", "Kapıda Kredi Kartı", "Nakit", "Yemek Kartları"]
-    @State private var paymentType = 0
-    
     private let minimumTotal: Float = 200
+    @State private var leftAtDoor = false
+    @State private var paymentType = 0
+    private let paymentTypes = ["Online Kredi Kartı", "Kapıda Kredi Kartı", "Nakit", "Yemek Kartları"]
     
     var body: some View {
         

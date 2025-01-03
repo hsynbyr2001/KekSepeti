@@ -85,16 +85,22 @@ https://randomuser.me random kullanıcı verisi gönderen ücretsiz bir API'dır
 ---
 
 ## Teknik Detaylar
-### App Builder: SwiftUI
+#### SwiftUI
 Bu uygulama app builder olarak SwiftUI kullanmaktadır.
+
+#### MapKit
+Uygulamanın adres ve sipariş takip sayfalarında Map komponenti kullanılmaktadır.
+
+#### Core Location
+Uygulamada cihazın / kullanıcının konumuna Core Location ile erişir ve Map komponentinde gösterir.
 
 #### SpriteKit
 Uygulamada bulunan görsel efektler SpriteKit ile oluşturulmuştur. Yakında interaktif oyunlar da eklenecektir.
 
-#### Komponentler
+#### Diğer Komponentler
 Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir. Adres sayfasında MapKit kullanılmıştır.
 
-#### Kullanıcı Profili
+#### UserDefaults & JSON Decoding Encoding
 Bu uygulama içerisinde bulunan Profile class'ını JSON encoder, decoder ve UserDefaults aracılığıyla kaydeder ve gerektiğinde veri tabanından kullanır.
 
 #### Dark Mode & Light Mode

@@ -42,6 +42,7 @@ struct BucketView: View {
             .navigationTitle("Sepetim")
         }
     }
+    
     func deleteProduct(at offsets: IndexSet) {
         bucket.products.remove(atOffsets: offsets)
     }

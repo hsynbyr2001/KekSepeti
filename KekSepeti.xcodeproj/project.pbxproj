@@ -44,6 +44,7 @@
 		BE8F5EC82D23122A00FE45EA /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EC72D23122A00FE45EA /* StoreListView.swift */; };
 		BE8F5ECA2D23158B00FE45EA /* Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EC92D23158B00FE45EA /* Bucket.swift */; };
 		BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */; };
+		BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB790BB2D2760AE000F824C /* AddressMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		BE8F5EC72D23122A00FE45EA /* StoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
 		BE8F5EC92D23158B00FE45EA /* Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket.swift; sourceTree = "<group>"; };
 		BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketView.swift; sourceTree = "<group>"; };
+		BEB790BB2D2760AE000F824C /* AddressMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				BE8F5EC52D23109600FE45EA /* CakeDetailView.swift */,
 				BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */,
 				BE3772E52D21C112004ED2A2 /* AddressView.swift */,
+				BEB790BB2D2760AE000F824C /* AddressMapView.swift */,
 				BE3772E72D21C147004ED2A2 /* CheckOutView.swift */,
 				BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */,
 				BE7176962D2634810087770F /* RatingView.swift */,
@@ -375,6 +378,7 @@
 				BE0C33922D2581DB001D16C8 /* User.swift in Sources */,
 				BE8F5EC82D23122A00FE45EA /* StoreListView.swift in Sources */,
 				BE3772EE2D21D0C8004ED2A2 /* CakeCellView.swift in Sources */,
+				BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */,
 				BE3772E62D21C112004ED2A2 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +534,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know your location so you can set your delivery adress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -561,6 +566,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know your location so you can set your delivery adress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

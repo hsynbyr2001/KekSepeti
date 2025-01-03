@@ -25,4 +25,8 @@ class Store {
         self.image = image
         self.products = products
     }
+    
+    deinit {
+        print("store deallocated")
+    }
 }
