@@ -77,6 +77,9 @@ Siparişi oluşturduktan sonra durumunu takip et. (Hazırlanıyor, yolda, teslim
 
 ![Screenshot](./gitimages/ss6.png)
 
+### 8. Siparişi Puanla
+Sipariş için bir değerlendirme yaz ve 5 üzerinden puan ver.
+
 ---
 
 ## Random User Generator API
@@ -92,13 +95,13 @@ Bu uygulama app builder olarak SwiftUI kullanmaktadır.
 Uygulamanın adres ve sipariş takip sayfalarında Map komponenti kullanılmaktadır.
 
 #### Core Location
-Uygulamada cihazın / kullanıcının konumuna Core Location ile erişir ve Map komponentinde gösterir.
+Uygulama cihazın / kullanıcının konumuna Core Location ile erişir ve Map komponentinde gösterir.
 
 #### SpriteKit
 Uygulamada bulunan görsel efektler SpriteKit ile oluşturulmuştur. Yakında interaktif oyunlar da eklenecektir.
 
 #### Diğer Komponentler
-Bu uygulama SwiftUI framework'ünden NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle, Task gibi komponentler içermektedir. Adres sayfasında MapKit kullanılmıştır.
+Bu uygulama SwiftUI'dan NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle gibi komponentler içermektedir.
 
 #### UserDefaults & JSON Decoding Encoding
 Bu uygulama içerisinde bulunan Profile class'ını JSON encoder, decoder ve UserDefaults aracılığıyla kaydeder ve gerektiğinde veri tabanından kullanır.

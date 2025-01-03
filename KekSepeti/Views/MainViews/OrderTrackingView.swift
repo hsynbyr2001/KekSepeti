@@ -14,7 +14,6 @@ struct OrderTrackingView: View {
     @State private var orderStatus: OrderStatus = .preparing
     @State private var timeRemainingForPreparing: Float = 0
     @State private var timeRemainingForDelivery: Float = 0
-    @State var showRating = false
     @State var showText = false
     @State private var orderStatusText = "🧁 Siparişiniz Hazırlanıyor"
     
@@ -36,12 +35,19 @@ struct OrderTrackingView: View {
                 .font(.title)
                 .bold()
                 .opacity(showText ? 1 : 0)
+            
+            if orderStatus == .delivered {
+                NavigationLink(destination: RatingView()){
+                    Text("Değerlendir")
+                        .padding(10)
+                        .background(.secondary)
+                        .clipShape(.rect(cornerRadius: 10))
+                        
+                }
+            }
         }
         .frame(height: 160)
         .navigationBarBackButtonHidden(true)
-        .sheet(isPresented: $showRating) {
-            RatingView()
-        }
         .onAppear {
             if orderStatus != .delivered {
                 startTimer()
@@ -53,7 +59,7 @@ struct OrderTrackingView: View {
     @State private var animationTimer: Timer?
     
     func startTimer() {
-        countDownTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+        countDownTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { timer in
             switch orderStatus {
             case .preparing:
                 if timeRemainingForPreparing < 19.8 {
@@ -75,7 +81,6 @@ struct OrderTrackingView: View {
                 countDownTimer?.invalidate()
                 animationTimer?.invalidate()
                 showText = true
-                showRating = true
             }
         }
         animationTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
