@@ -35,7 +35,7 @@ struct StoreListView: View {
                                 .font(.headline)
                                 .bold()
                                 .padding(6)
-                                .background(.secondary)
+                                .background(.gray.opacity(0.3))
                                 .clipShape(.rect(cornerRadius: 6))
                         }
                     }

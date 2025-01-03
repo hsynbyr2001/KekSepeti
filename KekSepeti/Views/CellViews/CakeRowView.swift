@@ -28,11 +28,11 @@ struct CakeRowView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: 200)
         .padding()
-        .background(.secondary)
+        .background(.gray.opacity(0.3))
         .clipShape(.rect(cornerRadius: 10))
         .overlay(
             Circle()
-                .fill(.red)
+                .fill(product.quantity > 1 ? .red.opacity(0.3) : .gray.opacity(0.3))
                 .frame(width: 30, height: 30)
                 .padding(5)
                 .overlay(

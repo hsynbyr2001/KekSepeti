@@ -13,7 +13,6 @@
 		BE0C33A02D259C03001D16C8 /* ss4.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339A2D259C03001D16C8 /* ss4.png */; };
 		BE0C33A12D259C03001D16C8 /* ss6.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339B2D259C03001D16C8 /* ss6.png */; };
 		BE0C33A22D259C03001D16C8 /* ss5.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339C2D259C03001D16C8 /* ss5.png */; };
-		BE0C33A42D259C03001D16C8 /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339E2D259C03001D16C8 /* ss2.png */; };
 		BE0C33A52D259C03001D16C8 /* ss3.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C339F2D259C03001D16C8 /* ss3.png */; };
 		BE0C33A72D259F87001D16C8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33A62D259F87001D16C8 /* AboutView.swift */; };
 		BE1468A02D235B5500E0EBFB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE14689F2D235B5500E0EBFB /* Profile.swift */; };
@@ -45,6 +44,7 @@
 		BE8F5ECA2D23158B00FE45EA /* Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5EC92D23158B00FE45EA /* Bucket.swift */; };
 		BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */; };
 		BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB790BB2D2760AE000F824C /* AddressMapView.swift */; };
+		BEB790BE2D286CE3000F824C /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB790BD2D286CE3000F824C /* ss2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		BE0C339A2D259C03001D16C8 /* ss4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss4.png; sourceTree = "<group>"; };
 		BE0C339B2D259C03001D16C8 /* ss6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss6.png; sourceTree = "<group>"; };
 		BE0C339C2D259C03001D16C8 /* ss5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss5.png; sourceTree = "<group>"; };
-		BE0C339E2D259C03001D16C8 /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 		BE0C339F2D259C03001D16C8 /* ss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss3.png; sourceTree = "<group>"; };
 		BE0C33A62D259F87001D16C8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BE14689F2D235B5500E0EBFB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		BE8F5EC92D23158B00FE45EA /* Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket.swift; sourceTree = "<group>"; };
 		BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketView.swift; sourceTree = "<group>"; };
 		BEB790BB2D2760AE000F824C /* AddressMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapView.swift; sourceTree = "<group>"; };
+		BEB790BD2D286CE3000F824C /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BE3772F72D21F87D004ED2A2 /* ss1.png */,
-				BE0C339E2D259C03001D16C8 /* ss2.png */,
+				BEB790BD2D286CE3000F824C /* ss2.png */,
 				BE0C339F2D259C03001D16C8 /* ss3.png */,
 				BE0C339A2D259C03001D16C8 /* ss4.png */,
 				BE0C339C2D259C03001D16C8 /* ss5.png */,
@@ -329,11 +329,11 @@
 			files = (
 				BE0C33A02D259C03001D16C8 /* ss4.png in Resources */,
 				BE3772F82D21F87D004ED2A2 /* ss1.png in Resources */,
-				BE0C33A42D259C03001D16C8 /* ss2.png in Resources */,
 				BE3772DE2D21C0EA004ED2A2 /* Preview Assets.xcassets in Resources */,
 				BE0C33A22D259C03001D16C8 /* ss5.png in Resources */,
 				BE0C33A12D259C03001D16C8 /* ss6.png in Resources */,
 				BE3772EC2D21C219004ED2A2 /* .gitignore in Resources */,
+				BEB790BE2D286CE3000F824C /* ss2.png in Resources */,
 				BE3772F62D21F86B004ED2A2 /* keklogo.png in Resources */,
 				BE3772DB2D21C0EA004ED2A2 /* Assets.xcassets in Resources */,
 				BE0C33A52D259C03001D16C8 /* ss3.png in Resources */,
