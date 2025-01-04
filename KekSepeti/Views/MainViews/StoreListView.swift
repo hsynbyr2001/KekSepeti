@@ -21,6 +21,7 @@ struct StoreListView: View {
                             NavigationLink(destination: StoreView(store: stores[indexPath], bucket: bucket, profile: profile)) {
                                 StoreCellView(store: stores[indexPath])
                             }
+                            .accessibilityIdentifier("StoreCell\(indexPath)")
                         }
                     }
                     NavigationLink("Hakkında") {

@@ -45,10 +45,19 @@
 		BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */; };
 		BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB790BB2D2760AE000F824C /* AddressMapView.swift */; };
 		BEB790BE2D286CE3000F824C /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB790BD2D286CE3000F824C /* ss2.png */; };
+		BEB790C62D28A8CE000F824C /* KekSepetiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB790C52D28A8CE000F824C /* KekSepetiUITests.swift */; };
+		BEB790C82D28A8CE000F824C /* KekSepetiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB790C72D28A8CE000F824C /* KekSepetiUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BE37AB2A2D261A16005C018E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE3772CB2D21C0E9004ED2A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE3772D22D21C0E9004ED2A2;
+			remoteInfo = KekSepeti;
+		};
+		BEB790C92D28A8CE000F824C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE3772CB2D21C0E9004ED2A2 /* Project object */;
 			proxyType = 1;
@@ -99,6 +108,9 @@
 		BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketView.swift; sourceTree = "<group>"; };
 		BEB790BB2D2760AE000F824C /* AddressMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapView.swift; sourceTree = "<group>"; };
 		BEB790BD2D286CE3000F824C /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
+		BEB790C32D28A8CE000F824C /* KekSepetiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KekSepetiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB790C52D28A8CE000F824C /* KekSepetiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiUITests.swift; sourceTree = "<group>"; };
+		BEB790C72D28A8CE000F824C /* KekSepetiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BE37AB232D261A16005C018E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB790C02D28A8CE000F824C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,6 +202,7 @@
 				BE3772EB2D21C219004ED2A2 /* .gitignore */,
 				BE3772D52D21C0E9004ED2A2 /* KekSepeti */,
 				BE37AB272D261A16005C018E /* KekSepetiTests */,
+				BEB790C42D28A8CE000F824C /* KekSepetiUITests */,
 				BE3772D42D21C0E9004ED2A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,6 +212,7 @@
 			children = (
 				BE3772D32D21C0E9004ED2A2 /* KekSepeti.app */,
 				BE37AB262D261A16005C018E /* KekSepetiTests.xctest */,
+				BEB790C32D28A8CE000F824C /* KekSepetiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +267,15 @@
 			path = SpriteKit;
 			sourceTree = "<group>";
 		};
+		BEB790C42D28A8CE000F824C /* KekSepetiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB790C52D28A8CE000F824C /* KekSepetiUITests.swift */,
+				BEB790C72D28A8CE000F824C /* KekSepetiUITestsLaunchTests.swift */,
+			);
+			path = KekSepetiUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +314,24 @@
 			productReference = BE37AB262D261A16005C018E /* KekSepetiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BEB790C22D28A8CE000F824C /* KekSepetiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB790CD2D28A8CE000F824C /* Build configuration list for PBXNativeTarget "KekSepetiUITests" */;
+			buildPhases = (
+				BEB790BF2D28A8CE000F824C /* Sources */,
+				BEB790C02D28A8CE000F824C /* Frameworks */,
+				BEB790C12D28A8CE000F824C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB790CA2D28A8CE000F824C /* PBXTargetDependency */,
+			);
+			name = KekSepetiUITests;
+			productName = KekSepetiUITests;
+			productReference = BEB790C32D28A8CE000F824C /* KekSepetiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -298,6 +346,10 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					BE37AB252D261A16005C018E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = BE3772D22D21C0E9004ED2A2;
+					};
+					BEB790C22D28A8CE000F824C = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = BE3772D22D21C0E9004ED2A2;
 					};
@@ -318,6 +370,7 @@
 			targets = (
 				BE3772D22D21C0E9004ED2A2 /* KekSepeti */,
 				BE37AB252D261A16005C018E /* KekSepetiTests */,
+				BEB790C22D28A8CE000F824C /* KekSepetiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,6 +396,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BE37AB242D261A16005C018E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB790C12D28A8CE000F824C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,6 +452,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEB790BF2D28A8CE000F824C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB790C82D28A8CE000F824C /* KekSepetiUITestsLaunchTests.swift in Sources */,
+				BEB790C62D28A8CE000F824C /* KekSepetiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -399,6 +468,11 @@
 			isa = PBXTargetDependency;
 			target = BE3772D22D21C0E9004ED2A2 /* KekSepeti */;
 			targetProxy = BE37AB2A2D261A16005C018E /* PBXContainerItemProxy */;
+		};
+		BEB790CA2D28A8CE000F824C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE3772D22D21C0E9004ED2A2 /* KekSepeti */;
+			targetProxy = BEB790C92D28A8CE000F824C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,6 +698,40 @@
 			};
 			name = Release;
 		};
+		BEB790CB2D28A8CE000F824C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BS5VTGPTN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.astronomer.KekSepetiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KekSepeti;
+			};
+			name = Debug;
+		};
+		BEB790CC2D28A8CE000F824C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BS5VTGPTN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.astronomer.KekSepetiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KekSepeti;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,6 +758,15 @@
 			buildConfigurations = (
 				BE37AB2D2D261A16005C018E /* Debug */,
 				BE37AB2E2D261A16005C018E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB790CD2D28A8CE000F824C /* Build configuration list for PBXNativeTarget "KekSepetiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB790CB2D28A8CE000F824C /* Debug */,
+				BEB790CC2D28A8CE000F824C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

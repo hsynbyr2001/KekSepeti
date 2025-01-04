@@ -23,16 +23,20 @@ struct CakeDetailView: View {
                 }
                 Section("Ekstra") {
                     Toggle("Kek için özel eklemeler?", isOn: $cake.speacialRequestEnabled.animation())
+                        .accessibilityIdentifier("SpecialRequestsToggle")
                     
                     if cake.speacialRequestEnabled {
                         Toggle("Ekstra krema ekleyin (\(cake.quantity, format: .currency(code: "TRY"))+)", isOn: $cake.extraFrosting)
+                            .accessibilityIdentifier("ExtraCreamToggle")
                         Toggle("Ekstra serpme ekleyin (\(Float(cake.quantity) / 2, format: .currency(code: "TRY"))+)", isOn: $cake.addSprinkles)
+                            .accessibilityIdentifier("ExtraSprinklesToggle")
                     }
                 }
                 Section("Toplam") {
                     HStack {
                         Stepper("\(cake.quantity)", value: $cake.quantity, in: 1...20)
                             .labelsHidden()
+                            .accessibilityIdentifier("AmountStepper")
                         Text("\(cake.quantity)")
                             .font(.title)
                         Spacer()
@@ -41,7 +45,6 @@ struct CakeDetailView: View {
                     }
                 }
                 Button {
-                    
                     var isContaining = false
                     
                     for (index, product) in bucket.products.enumerated() {
@@ -61,6 +64,7 @@ struct CakeDetailView: View {
                 } label: {
                     Text("Sepete Ekle")
                 }
+                .accessibilityIdentifier("AddToBucketButton")
             }
             .navigationTitle("\(cake.name)")
         }

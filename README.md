@@ -100,6 +100,9 @@ Uygulama cihazın / kullanıcının konumuna Core Location ile erişir ve Map ko
 #### SpriteKit
 Uygulamada bulunan görsel efektler SpriteKit ile oluşturulmuştur. Yakında interaktif oyunlar da eklenecektir.
 
+#### Unit Testler & UI Testler
+Uygulamada hem birim testleri hem de kullanıcı arayüzü testleri içermektedir. 
+
 #### Diğer Komponentler
 Bu uygulama SwiftUI'dan NavigationStack, Text, Button, Form, ScrollView, HStack, VStack, ForEach, Stepper, Toggle gibi komponentler içermektedir.
 

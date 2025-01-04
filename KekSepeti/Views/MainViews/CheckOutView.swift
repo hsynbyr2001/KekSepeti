@@ -11,7 +11,7 @@ struct CheckoutView: View {
     
     var bucket: Bucket
     var profile: Profile
-    private let minimumTotal: Float = 200
+    private let minimumTotal: Float = 170
     @State private var leftAtDoor = false
     @State private var paymentType = 0
     private let paymentTypes = ["Online Kredi Kartı", "Kapıda Kredi Kartı", "Nakit", "Yemek Kartları"]
@@ -48,7 +48,6 @@ struct CheckoutView: View {
                         .padding(0)
                     Text("\(bucket.total, format: .currency(code: "TRY"))")
                         .font(.title)
-                    
                 }
                 Section {
                     if !canOrder {
@@ -60,6 +59,7 @@ struct CheckoutView: View {
                         OrderTrackingView(profile: profile)
                             .toolbar(.hidden, for: .navigationBar)
                     }
+                    .accessibilityIdentifier("CheckOutButton")
                     .disabled(!canOrder)
                 }
             }

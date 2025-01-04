@@ -40,6 +40,7 @@ struct StoreView: View {
                                 NavigationLink(destination: CakeDetailView(cake: store.products[indexPath], bucket: bucket, indexPath: indexPath)) {
                                     CakeRowView(product: product)
                                 }
+                                .accessibilityIdentifier("CakeButton\(indexPath)")
                             }
                         }
                     }
@@ -57,6 +58,7 @@ struct StoreView: View {
                             .background(.gray.opacity(0.3))
                             .clipShape(.rect(cornerRadius: 6))
                     }
+                    .accessibilityIdentifier("BucketButton")
                 }
             }
         }

@@ -59,7 +59,7 @@ struct OrderTrackingView: View {
     @State private var animationTimer: Timer?
     
     func startTimer() {
-        countDownTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { timer in
+        countDownTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
             switch orderStatus {
             case .preparing:
                 if timeRemainingForPreparing < 19.8 {

@@ -26,26 +26,35 @@ struct AddressView: View {
             }
             Section("Teslimat bilgileri") {
                 TextField("İsim", text: $profile.name)
+                    .accessibilityIdentifier("NameField")
                 TextField("İlçe", text: $profile.area)
+                    .accessibilityIdentifier("AreaField")
                 Picker("Şehir", selection: $profile.city) {
                     ForEach(profile.cities, id: \.self) {
-                        Text("\($0)")
+                        Text("\($0)").tag("\($0)")
                     }
                 }
+                .accessibilityIdentifier("CityPicker")
                 TextField("Posta Kodu", text: $profile.zip)
+                    .accessibilityIdentifier("ZipField")
             }
             Section("Beni hatırla") {
                 Toggle("Bilgiler kayıtlı kalsın mı?", isOn: $profile.isRememberMeOn)
+                    .accessibilityIdentifier("RememberMeButton")
             }
             .disabled(!profile.hasValidAddress)
             Section {
                 NavigationLink("Adresi Onayla") {
                     CheckoutView(bucket: bucket, profile: profile)
                 }
+                .accessibilityIdentifier("ConfirmAddress")
             }
             .disabled(!profile.hasValidAddress)
         }
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            profile.city = profile.cities[0]
+        }
     }
 }
 

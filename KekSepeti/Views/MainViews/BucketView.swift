@@ -38,6 +38,7 @@ struct BucketView: View {
                         .toolbar(.hidden, for: .navigationBar)
                 }
                 .disabled(bucket.products.isEmpty)
+                .accessibilityIdentifier("ConfirmBucket")
             }
             .navigationTitle("Sepetim")
         }
