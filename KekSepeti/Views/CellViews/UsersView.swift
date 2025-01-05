@@ -27,10 +27,15 @@ struct UsersView: View {
     }
     
     func fetchUsers() {
-        guard let url = URL(string: "https://randomuser.me/api?inc=name,picture&nat=tr&results=10") else {
+        // Declare endpoint
+        let endPoint = "https://randomuser.me/api?inc=name,picture&nat=tr&results=10"
+        
+        // Check url existence
+        guard let url = URL(string: endPoint) else {
             print("Invalid URL")
             return
         }
+        
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -44,9 +49,9 @@ struct UsersView: View {
             }
             
             do {
-                let decodedResponse = try JSONDecoder().decode(UserResponse.self, from: data)
+                let response = try JSONDecoder().decode(UserResponse.self, from: data)
                 DispatchQueue.main.async {
-                    self.users = decodedResponse.results
+                    self.users = response.results
                 }
             } catch {
                 print("Error decoding JSON: \(error)")

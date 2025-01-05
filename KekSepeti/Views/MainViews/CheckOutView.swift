@@ -11,7 +11,7 @@ struct CheckoutView: View {
     
     var bucket: Bucket
     var profile: Profile
-    private let minimumTotal: Float = 170
+    private let minimumTotal: Float = 1
     @State private var leftAtDoor = false
     @State private var paymentType = 0
     private let paymentTypes = ["Online Kredi Kartı", "Kapıda Kredi Kartı", "Nakit", "Yemek Kartları"]
@@ -33,6 +33,7 @@ struct CheckoutView: View {
                     Text("Teslim Alan: \(profile.name)")
                     Text("Adres: \(profile.area), \(profile.city), \(profile.zip)")
                     Toggle("Kapıya Bırak", isOn: $leftAtDoor)
+                        .accessibilityIdentifier("LeavePackageButton")
                 }
                 Section("Ödeme Yöntemi") {
                     Picker("Ödeme Yöntemi", selection: $paymentType) {
@@ -63,6 +64,9 @@ struct CheckoutView: View {
                     .disabled(!canOrder)
                 }
             }
+            .accessibilityIdentifier("CheckOutView")
+            .navigationTitle("Sipariş Özeti")
+            .scrollBounceBehavior(.basedOnSize)
             .onAppear {
                 let defaults = UserDefaults.standard
                 
@@ -78,8 +82,6 @@ struct CheckoutView: View {
                     defaults.removeObject(forKey: "profile")
                 }
             }
-            .navigationTitle("Sipariş Özeti")
-            .scrollBounceBehavior(.basedOnSize)
         }
     }
 }

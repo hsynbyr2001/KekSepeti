@@ -23,7 +23,7 @@ final class KekSepetiUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
+    func testAddToBucket() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
@@ -37,6 +37,7 @@ final class KekSepetiUITests: XCTestCase {
         storeButton.tap()
         
         // MARK: Cake Detail View
+        // Add all items of store to bucket
         for i in 0...5 {
             // Find the first cake button and tap it
             let cakeButton = app.buttons["CakeButton\(i)"]
@@ -64,6 +65,10 @@ final class KekSepetiUITests: XCTestCase {
             addToBucketButton.tap()
         }
         
+        testConfirmingBucket(from: app)
+    }
+    
+    func testConfirmingBucket(from app: XCUIApplication) {
         // MARK: Back to Store List View
         // Find the bucket button and tap it
         let bucketButton = app.buttons["BucketButton"]
@@ -75,6 +80,11 @@ final class KekSepetiUITests: XCTestCase {
         let confirmBucketButton = app.buttons["ConfirmBucket"]
         XCTAssertTrue(confirmBucketButton.exists, "Confirm bucket button existing")
         confirmBucketButton.tap()
+        
+        testFillingAddress(from: app)
+    }
+    
+    func testFillingAddress(from app: XCUIApplication) {
         
         // MARK: Address View
         // Find the name text field and tap it
@@ -114,8 +124,23 @@ final class KekSepetiUITests: XCTestCase {
         XCTAssertTrue(confirmAddressButton.exists, "Confirm address button existing")
         confirmAddressButton.tap()
         
+        testCheckOut(from: app)
+    }
+    
+    func testCheckOut(from app: XCUIApplication) {
         // MARK: Check Out View
-        // Test will continue...
+        // Swipe up to see check out button
+        app.swipeUp(velocity: 10)
+        
+        // Find the leave package button and tap it
+        let leavePackageButton = app.switches["LeavePackageButton"].switches.firstMatch
+        XCTAssertTrue(leavePackageButton.exists, "Remember me toggle existing")
+        leavePackageButton.tap()
+        
+        // Find the confirm bucket button and tap it
+        let confirmCheckOutButton = app.buttons["CheckOutButton"]
+        XCTAssertTrue(confirmCheckOutButton.exists, "Confirm check out button existing")
+        confirmCheckOutButton.tap()
     }
     
     func testLaunchPerformance() throws {
