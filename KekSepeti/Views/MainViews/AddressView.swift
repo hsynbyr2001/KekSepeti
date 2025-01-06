@@ -8,57 +8,40 @@
 import SwiftUI
 
 struct AddressView: View {
-    
-    @Environment(\.dismiss) private var dismiss
-    
     @State var bucket: Bucket
     @State var profile: Profile
     
     var body: some View {
-        AddressMapView()
-        Form {
-            Section {
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Geri")
+        NavigationStack {
+            if profile.addresses.isEmpty {
+                ContentUnavailableView {
+                    Label("Adres yok", systemImage: "exclamationmark.bubble.fill")
+                } description: {
+                    Text("Yeni bir adres ekle")
+                } actions: {
+                    NavigationLink("Yeni Adres") {
+                        NewAddressView(profile: profile)
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
             }
-            Section("Teslimat bilgileri") {
-                TextField("İsim", text: $profile.name)
-                    .accessibilityIdentifier("NameField")
-                TextField("İlçe", text: $profile.area)
-                    .accessibilityIdentifier("AreaField")
-                Picker("Şehir", selection: $profile.city) {
-                    ForEach(profile.cities, id: \.self) {
-                        Text("\($0)").tag("\($0)")
+            else {
+                List {
+                    Section("Kayıtlı Adreslerim") {
+                        ForEach(profile.addresses.indices, id: \.self) { indexPath in
+                            NavigationLink("\(profile.addresses[indexPath].area), \(profile.addresses[indexPath].city), \(profile.addresses[indexPath].zip)", destination: CheckoutView(bucket: bucket, profile: profile, addressIndex: indexPath))
+                        }
+                    }
+                    Section("Yeni oluştur") {
+                        NavigationLink("Yeni Adres Ekle", destination: NewAddressView(profile: profile))
                     }
                 }
-                .accessibilityIdentifier("CityPicker")
-                TextField("Posta Kodu", text: $profile.zip)
-                    .accessibilityIdentifier("ZipField")
             }
-            Section("Beni hatırla") {
-                Toggle("Bilgiler kayıtlı kalsın mı?", isOn: $profile.isRememberMeOn)
-                    .accessibilityIdentifier("RememberMeButton")
-            }
-            .disabled(!profile.hasValidAddress)
-            Section {
-                NavigationLink("Adresi Onayla") {
-                    CheckoutView(bucket: bucket, profile: profile)
-                }
-                .accessibilityIdentifier("ConfirmAddress")
-            }
-            .disabled(!profile.hasValidAddress)
         }
-        .navigationBarBackButtonHidden(true)
-        .onAppear {
-            profile.city = profile.cities[0]
-        }
+        .navigationTitle("Adreslerim")
     }
 }
 
 #Preview {
     AddressView(bucket: Bucket(products: []), profile: Profile())
 }
-

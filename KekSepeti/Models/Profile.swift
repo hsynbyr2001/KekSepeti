@@ -10,25 +10,10 @@ import Foundation
 @Observable
 class Profile: Codable {
     var name: String
-    var area: String
-    var city: String
-    var zip: String
-    var isRememberMeOn = false
-    
-    let cities = ["İstanbul", "İzmir", "Ankara"]
+    var addresses: [Address]
     
     init() {
         self.name = ""
-        self.area = ""
-        self.city = ""
-        self.zip = ""
-    }
-    
-    var hasValidAddress: Bool {
-        if name.isEmpty || area.isEmpty || city.isEmpty || zip.isEmpty {
-            return false
-        }
-        
-        return true
+        self.addresses = []
     }
 }

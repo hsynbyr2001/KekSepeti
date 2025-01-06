@@ -9,16 +9,27 @@ import SwiftUI
 
 struct BucketView: View {
     
+    @Environment(\.dismiss) private var dismiss
     @State var bucket: Bucket
     @State var profile: Profile
     
     var body: some View {
         NavigationStack {
-            List {
-                Section("Ürünler") {
-                    if bucket.products.isEmpty {
-                        Text("Sepetin boş")
-                    } else {
+            if bucket.products.isEmpty {
+                ContentUnavailableView {
+                    Label("Sepetin Boş", systemImage: "exclamationmark.bubble.fill")
+                } description: {
+                    Text("Sepetine biraz kek ekle!")
+                } actions: {
+                    Button("Tamam", action: {
+                        dismiss()
+                    })
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            else {
+                List {
+                    Section("Ürünler") {
                         ForEach(bucket.products.indices, id: \.self) { indexPath in
                             if !bucket.products.isEmpty {
                                 NavigationLink("\(bucket.products[indexPath].name), \(bucket.products[indexPath].quantity) adet, \(bucket.products[indexPath].cost, format: .currency(code: "TRY"))") {
@@ -28,19 +39,19 @@ struct BucketView: View {
                         }
                         .onDelete(perform: deleteProduct)
                     }
+                    Section("Toplam") {
+                        Text("\(bucket.total, format: .currency(code: "TRY"))")
+                            .font(.title)
+                    }
+                    NavigationLink("Sepeti Onayla") {
+                        AddressView(bucket: bucket, profile: profile)
+                            //.toolbar(.hidden, for: .navigationBar)
+                    }
+                    .disabled(bucket.products.isEmpty)
+                    .accessibilityIdentifier("ConfirmBucket")
                 }
-                Section("Toplam") {
-                    Text("\(bucket.total, format: .currency(code: "TRY"))")
-                        .font(.title)
-                }
-                NavigationLink("Sepeti Onayla") {
-                    AddressView(bucket: bucket, profile: profile)
-                        .toolbar(.hidden, for: .navigationBar)
-                }
-                .disabled(bucket.products.isEmpty)
-                .accessibilityIdentifier("ConfirmBucket")
+                .navigationTitle("Sepetim")
             }
-            .navigationTitle("Sepetim")
         }
     }
     

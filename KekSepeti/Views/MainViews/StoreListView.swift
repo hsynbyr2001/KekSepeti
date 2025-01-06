@@ -55,7 +55,7 @@ struct StoreListView: View {
         do {
             if let savedData = defaults.data(forKey: "profile") {
                 let decodedObject = try JSONDecoder().decode(Profile.self, from: savedData)
-                print("Class retrieved successfully: \(decodedObject.name), \(decodedObject.city)")
+                print("Class retrieved successfully: \(decodedObject.name), \(decodedObject.addresses)")
                 profile = decodedObject
             } else {
                 print("No data found for the key.")

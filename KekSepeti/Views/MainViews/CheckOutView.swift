@@ -11,6 +11,7 @@ struct CheckoutView: View {
     
     var bucket: Bucket
     var profile: Profile
+    var addressIndex: Int
     private let minimumTotal: Float = 1
     @State private var leftAtDoor = false
     @State private var paymentType = 0
@@ -31,7 +32,7 @@ struct CheckoutView: View {
                 }
                 Section("Teslimat Bilgileri") {
                     Text("Teslim Alan: \(profile.name)")
-                    Text("Adres: \(profile.area), \(profile.city), \(profile.zip)")
+                    Text("Adres: \(profile.addresses[addressIndex].area), \(profile.addresses[addressIndex].city), \(profile.addresses[addressIndex].zip)")
                     Toggle("Kapıya Bırak", isOn: $leftAtDoor)
                         .accessibilityIdentifier("LeavePackageButton")
                 }
@@ -67,6 +68,7 @@ struct CheckoutView: View {
             .accessibilityIdentifier("CheckOutView")
             .navigationTitle("Sipariş Özeti")
             .scrollBounceBehavior(.basedOnSize)
+            /*
             .onAppear {
                 let defaults = UserDefaults.standard
                 
@@ -81,11 +83,11 @@ struct CheckoutView: View {
                 } else {
                     defaults.removeObject(forKey: "profile")
                 }
-            }
+            }*/
         }
     }
 }
 
 #Preview {
-    CheckoutView(bucket: Bucket(products: []), profile: Profile())
+    CheckoutView(bucket: Bucket(products: []), profile: Profile(), addressIndex: 0)
 }

@@ -22,12 +22,14 @@
 		BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */; };
 		BE3772DB2D21C0EA004ED2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */; };
 		BE3772DE2D21C0EA004ED2A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3772DD2D21C0EA004ED2A2 /* Preview Assets.xcassets */; };
-		BE3772E62D21C112004ED2A2 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772E52D21C112004ED2A2 /* AddressView.swift */; };
+		BE3772E62D21C112004ED2A2 /* NewAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772E52D21C112004ED2A2 /* NewAddressView.swift */; };
 		BE3772E82D21C147004ED2A2 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772E72D21C147004ED2A2 /* CheckOutView.swift */; };
 		BE3772EC2D21C219004ED2A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BE3772EB2D21C219004ED2A2 /* .gitignore */; };
 		BE3772EE2D21D0C8004ED2A2 /* CakeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3772ED2D21D0C8004ED2A2 /* CakeCellView.swift */; };
 		BE3772F62D21F86B004ED2A2 /* keklogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3772F52D21F86A004ED2A2 /* keklogo.png */; };
 		BE3772F82D21F87D004ED2A2 /* ss1.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3772F72D21F87D004ED2A2 /* ss1.png */; };
+		BE37A2AD2D2B117500940599 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37A2AC2D2B117500940599 /* Address.swift */; };
+		BE37A2AF2D2B18C100940599 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37A2AE2D2B18C100940599 /* AddressView.swift */; };
 		BE37AB292D261A16005C018E /* KekSepetiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37AB282D261A16005C018E /* KekSepetiTests.swift */; };
 		BE37AB302D261A7C005C018E /* FeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37AB2F2D261A7C005C018E /* FeatureTests.swift */; };
 		BE71768E2D261FA10087770F /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE71768D2D261FA10087770F /* SnowView.swift */; };
@@ -83,13 +85,15 @@
 		BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiApp.swift; sourceTree = "<group>"; };
 		BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE3772DD2D21C0EA004ED2A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BE3772E52D21C112004ED2A2 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		BE3772E52D21C112004ED2A2 /* NewAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddressView.swift; sourceTree = "<group>"; };
 		BE3772E72D21C147004ED2A2 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		BE3772EB2D21C219004ED2A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BE3772ED2D21D0C8004ED2A2 /* CakeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeCellView.swift; sourceTree = "<group>"; };
 		BE3772F42D21EEC6004ED2A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE3772F52D21F86A004ED2A2 /* keklogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keklogo.png; sourceTree = "<group>"; };
 		BE3772F72D21F87D004ED2A2 /* ss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss1.png; sourceTree = "<group>"; };
+		BE37A2AC2D2B117500940599 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		BE37A2AE2D2B18C100940599 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		BE37AB262D261A16005C018E /* KekSepetiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KekSepetiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE37AB282D261A16005C018E /* KekSepetiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KekSepetiTests.swift; sourceTree = "<group>"; };
 		BE37AB2F2D261A7C005C018E /* FeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTests.swift; sourceTree = "<group>"; };
@@ -171,7 +175,8 @@
 				BE8F5EBD2D23077300FE45EA /* StoreView.swift */,
 				BE8F5EC52D23109600FE45EA /* CakeDetailView.swift */,
 				BE8F5ECB2D2322EB00FE45EA /* BucketView.swift */,
-				BE3772E52D21C112004ED2A2 /* AddressView.swift */,
+				BE37A2AE2D2B18C100940599 /* AddressView.swift */,
+				BE3772E52D21C112004ED2A2 /* NewAddressView.swift */,
 				BEB790BB2D2760AE000F824C /* AddressMapView.swift */,
 				BE3772E72D21C147004ED2A2 /* CheckOutView.swift */,
 				BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */,
@@ -189,6 +194,7 @@
 				BE8F5EC92D23158B00FE45EA /* Bucket.swift */,
 				BE8F5EC12D2309B800FE45EA /* Cake.swift */,
 				BE14689F2D235B5500E0EBFB /* Profile.swift */,
+				BE37A2AC2D2B117500940599 /* Address.swift */,
 				BE0C33912D2581DB001D16C8 /* User.swift */,
 			);
 			path = Models;
@@ -425,9 +431,11 @@
 				BE8F5EC02D2308A200FE45EA /* Store.swift in Sources */,
 				BE7176972D2634810087770F /* RatingView.swift in Sources */,
 				BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */,
+				BE37A2AD2D2B117500940599 /* Address.swift in Sources */,
 				BE8F5ECA2D23158B00FE45EA /* Bucket.swift in Sources */,
 				BE8F5EC62D23109600FE45EA /* CakeDetailView.swift in Sources */,
 				BE1468A02D235B5500E0EBFB /* Profile.swift in Sources */,
+				BE37A2AF2D2B18C100940599 /* AddressView.swift in Sources */,
 				BE3772E82D21C147004ED2A2 /* CheckOutView.swift in Sources */,
 				BE1468A22D2373AA00E0EBFB /* OrderTrackingView.swift in Sources */,
 				BE8F5EC42D230B7E00FE45EA /* Stores.swift in Sources */,
@@ -439,7 +447,7 @@
 				BE8F5EC82D23122A00FE45EA /* StoreListView.swift in Sources */,
 				BE3772EE2D21D0C8004ED2A2 /* CakeCellView.swift in Sources */,
 				BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */,
-				BE3772E62D21C112004ED2A2 /* AddressView.swift in Sources */,
+				BE3772E62D21C112004ED2A2 /* NewAddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
