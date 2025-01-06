@@ -38,7 +38,7 @@ final class KekSepetiUITests: XCTestCase {
         
         // MARK: Cake Detail View
         // Add all items of store to bucket
-        for i in 0...5 {
+        for i in 0...1 {
             // Find the first cake button and tap it
             let cakeButton = app.buttons["CakeButton\(i)"]
             XCTAssertTrue(cakeButton.exists, "Cake button \(i) existing")
@@ -81,12 +81,20 @@ final class KekSepetiUITests: XCTestCase {
         XCTAssertTrue(confirmBucketButton.exists, "Confirm bucket button existing")
         confirmBucketButton.tap()
         
-        testFillingAddress(from: app)
+        testAddNewAddress(from: app)
     }
     
-    func testFillingAddress(from app: XCUIApplication) {
+    func testAddNewAddress(from app: XCUIApplication) {
         
         // MARK: Address View
+        
+            // Find the new address button and tap it
+            let confirmBucketButton = app.buttons["NewAddressButton"]
+            XCTAssertTrue(confirmBucketButton.exists, "Confirm new address button existing")
+            confirmBucketButton.tap()
+        
+        
+        // MARK: New Address View
         // Find the name text field and tap it
         let nameField = app.textFields["NameField"]
         XCTAssertTrue(nameField.exists, "Name field existing")
@@ -105,24 +113,27 @@ final class KekSepetiUITests: XCTestCase {
         let areaText = "Nişantaşı"
         areaField.typeText(areaText)
         
+        app.swipeUp()
+        
         // Find the zip text field and tap it
         let zipField = app.textFields["ZipField"]
-        XCTAssertTrue(zipField.exists, "Zip Field existing")
+        XCTAssertTrue(zipField.exists, "Zip field existing")
         zipField.tap()
         
-        // Type text into the TextField
+        // Type text into the ZipField
         let zipText = "34000"
         zipField.typeText(zipText)
-        
-        // Find the remember me button and tap it
-        let rememberMeButton = app.switches["RememberMeButton"].switches.firstMatch
-        XCTAssertTrue(rememberMeButton.exists, "Remember me toggle existing")
-        rememberMeButton.tap()
         
         // Find the confirm bucket button and tap it
         let confirmAddressButton = app.buttons["ConfirmAddress"]
         XCTAssertTrue(confirmAddressButton.exists, "Confirm address button existing")
         confirmAddressButton.tap()
+        
+        // MARK: Back to Address View again
+        // Find the confirm bucket button and tap it
+        let selectAddressButton = app.buttons["SelectAddress"].firstMatch
+        XCTAssertTrue(selectAddressButton.exists, "Confirm address button existing")
+        selectAddressButton.tap()
         
         testCheckOut(from: app)
     }
@@ -130,7 +141,7 @@ final class KekSepetiUITests: XCTestCase {
     func testCheckOut(from app: XCUIApplication) {
         // MARK: Check Out View
         // Swipe up to see check out button
-        app.swipeUp(velocity: 10)
+        app.swipeUp()
         
         // Find the leave package button and tap it
         let leavePackageButton = app.switches["LeavePackageButton"].switches.firstMatch

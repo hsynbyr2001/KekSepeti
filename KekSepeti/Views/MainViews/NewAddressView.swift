@@ -36,15 +36,14 @@ struct NewAddressView: View {
                         Text("\($0)").tag("\($0)")
                     }
                 }
-                .accessibilityIdentifier("CityPicker")
             }
             Section {
                 Button("Adresi Kaydet", action: {
                     profile.addresses.append(address)
                     saveProfile()
-                    print(profile.addresses)
                     dismiss()
                 })
+                .accessibilityIdentifier("ConfirmAddress")
             }
             .disabled(!address.hasValidAddress)
         }

@@ -23,6 +23,7 @@ struct AddressView: View {
                         NewAddressView(profile: profile)
                     }
                     .buttonStyle(.borderedProminent)
+                    .accessibilityIdentifier("NewAddressButton")
                 }
             }
             else {
@@ -30,10 +31,12 @@ struct AddressView: View {
                     Section("Kayıtlı Adreslerim") {
                         ForEach(profile.addresses.indices, id: \.self) { indexPath in
                             NavigationLink("\(profile.addresses[indexPath].area), \(profile.addresses[indexPath].city), \(profile.addresses[indexPath].zip)", destination: CheckoutView(bucket: bucket, profile: profile, addressIndex: indexPath))
+                                .accessibilityIdentifier("SelectAddress")
                         }
                     }
                     Section("Yeni oluştur") {
                         NavigationLink("Yeni Adres Ekle", destination: NewAddressView(profile: profile))
+                            .accessibilityIdentifier("NewAddressButton")
                     }
                 }
             }
