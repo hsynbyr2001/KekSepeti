@@ -25,8 +25,6 @@ struct NewAddressView: View {
                 }
             }
             Section("Teslimat bilgileri") {
-                TextField("İsim", text: $profile.name)
-                    .accessibilityIdentifier("NameField")
                 TextField("İlçe", text: $address.area)
                     .accessibilityIdentifier("AreaField")
                 TextField("Posta Kodu", text: $address.zip)
@@ -40,30 +38,21 @@ struct NewAddressView: View {
             Section {
                 Button("Adresi Kaydet", action: {
                     profile.addresses.append(address)
-                    saveProfile()
+                    profile.save()
                     dismiss()
                 })
                 .accessibilityIdentifier("ConfirmAddress")
             }
             .disabled(!address.hasValidAddress)
         }
+        .toolbar(.hidden, for: .navigationBar)
         .navigationBarBackButtonHidden(true)
         .onAppear {
             address.city = address.cities[0]
         }
     }
     
-    func saveProfile() {
-        let defaults = UserDefaults.standard
-        
-        do {
-            let encodedData = try JSONEncoder().encode(profile)
-            defaults.set(encodedData, forKey: "profile")
-            print("Profile saved successfully!")
-        } catch {
-            print("Failed to encode and save object: \(error)")
-        }
-    }
+    
 }
 
 #Preview {

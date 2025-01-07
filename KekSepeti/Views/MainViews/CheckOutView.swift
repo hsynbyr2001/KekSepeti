@@ -68,22 +68,6 @@ struct CheckoutView: View {
             .accessibilityIdentifier("CheckOutView")
             .navigationTitle("Sipariş Özeti")
             .scrollBounceBehavior(.basedOnSize)
-            /*
-            .onAppear {
-                let defaults = UserDefaults.standard
-                
-                if profile.isRememberMeOn {
-                    do {
-                        let encodedData = try JSONEncoder().encode(profile)
-                        defaults.set(encodedData, forKey: "profile")
-                        print("Profile saved successfully!")
-                    } catch {
-                        print("Failed to encode and save object: \(error)")
-                    }
-                } else {
-                    defaults.removeObject(forKey: "profile")
-                }
-            }*/
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CakeDetailView: View {
     
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     
     @State var cake: Cake
     @State var bucket: Bucket
@@ -45,22 +45,7 @@ struct CakeDetailView: View {
                     }
                 }
                 Button {
-                    var isContaining = false
-                    
-                    for (index, product) in bucket.products.enumerated() {
-                        if product.type == cake.type {
-                            bucket.products[index] = cake
-                            isContaining = true
-                            print("Ürün zaten sepete eklenmiş. Ürün güncellendi.")
-                            break
-                        }
-                    }
-                    
-                    if !isContaining {
-                        bucket.products.append(cake)
-                        print("Ürün sepete eklendi.")
-                    }
-                    dismiss()
+                    addToBucket()
                 } label: {
                     Text("Sepete Ekle")
                 }

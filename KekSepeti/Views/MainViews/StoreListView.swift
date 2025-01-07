@@ -10,7 +10,7 @@ import SwiftUI
 struct StoreListView: View {
     
     @State private var bucket = Bucket(products: [])
-    @State private var profile = Profile()
+    @State var profile = Profile()
     
     var body: some View {
         NavigationStack {
@@ -47,21 +47,6 @@ struct StoreListView: View {
                 SnowView()
                     .allowsHitTesting(false)
             }
-        }
-    }
-    
-    func loadProfile() {
-        let defaults = UserDefaults.standard
-        do {
-            if let savedData = defaults.data(forKey: "profile") {
-                let decodedObject = try JSONDecoder().decode(Profile.self, from: savedData)
-                print("Class retrieved successfully: \(decodedObject.name), \(decodedObject.addresses)")
-                profile = decodedObject
-            } else {
-                print("No data found for the key.")
-            }
-        } catch {
-            print("Failed to decode object: \(error)")
         }
     }
 }

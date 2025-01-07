@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct AddressView: View {
     @State var bucket: Bucket
@@ -28,6 +29,32 @@ struct AddressView: View {
             }
             else {
                 List {
+                    Section("Profil") {
+                        NavigationLink(destination: ProfileView(profile: profile)) {
+                            if profile.name == "" {
+                                Text("Profil Oluştur")
+                            } else {
+                                HStack {
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 100)
+                                            .foregroundColor(.gray)
+                                        if let uiImage = UIImage(data: profile.image) {
+                                            Image(uiImage: uiImage)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 100)
+                                                .clipShape(.circle)
+                                        }
+                                    }
+                                    Text(profile.name)
+                                        .font(.title)
+                                        .bold()
+                                }
+                                .padding()
+                            }
+                        }
+                    }
                     Section("Kayıtlı Adreslerim") {
                         ForEach(profile.addresses.indices, id: \.self) { indexPath in
                             NavigationLink("\(profile.addresses[indexPath].area), \(profile.addresses[indexPath].city), \(profile.addresses[indexPath].zip)", destination: CheckoutView(bucket: bucket, profile: profile, addressIndex: indexPath))

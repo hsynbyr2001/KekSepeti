@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE02341E2D2C990C005795B7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02341D2D2C990C005795B7 /* ProfileView.swift */; };
+		BE0234212D2CADFA005795B7 /* StoreListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0234202D2CADFA005795B7 /* StoreListController.swift */; };
+		BE0234232D2CAE90005795B7 /* CakeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0234222D2CAE90005795B7 /* CakeDetailController.swift */; };
+		BE0234252D2CB095005795B7 /* OrderTrackingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0234242D2CB095005795B7 /* OrderTrackingController.swift */; };
+		BE0234272D2CB134005795B7 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0234262D2CB134005795B7 /* AboutController.swift */; };
 		BE0C33922D2581DB001D16C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33912D2581DB001D16C8 /* User.swift */; };
 		BE0C33962D2582BF001D16C8 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33952D2582BF001D16C8 /* UsersView.swift */; };
 		BE0C33982D258AF2001D16C8 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C33972D258AF2001D16C8 /* UserCellView.swift */; };
@@ -69,6 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE02341D2D2C990C005795B7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BE0234202D2CADFA005795B7 /* StoreListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListController.swift; sourceTree = "<group>"; };
+		BE0234222D2CAE90005795B7 /* CakeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeDetailController.swift; sourceTree = "<group>"; };
+		BE0234242D2CB095005795B7 /* OrderTrackingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingController.swift; sourceTree = "<group>"; };
+		BE0234262D2CB134005795B7 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		BE0C33912D2581DB001D16C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE0C33952D2582BF001D16C8 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		BE0C33972D258AF2001D16C8 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
@@ -142,6 +152,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE02341F2D2CADD1005795B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE0234202D2CADFA005795B7 /* StoreListController.swift */,
+				BE0234222D2CAE90005795B7 /* CakeDetailController.swift */,
+				BE0234242D2CB095005795B7 /* OrderTrackingController.swift */,
+				BE0234262D2CB134005795B7 /* AboutController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BE0C33992D259B97001D16C8 /* gitimages */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +203,7 @@
 				BE1468A12D2373AA00E0EBFB /* OrderTrackingView.swift */,
 				BE7176962D2634810087770F /* RatingView.swift */,
 				BE0C33A62D259F87001D16C8 /* AboutView.swift */,
+				BE02341D2D2C990C005795B7 /* ProfileView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -227,8 +249,10 @@
 			isa = PBXGroup;
 			children = (
 				BE3772D62D21C0E9004ED2A2 /* KekSepetiApp.swift */,
+				BE02341F2D2CADD1005795B7 /* Controllers */,
 				BE2B77C62D24613B008D8F04 /* Models */,
 				BE3772E42D21C102004ED2A2 /* Views */,
+				BE7176952D26249C0087770F /* SpriteKit */,
 				BE3772DC2D21C0EA004ED2A2 /* Preview Content */,
 				BE3772DA2D21C0EA004ED2A2 /* Assets.xcassets */,
 			);
@@ -246,7 +270,6 @@
 		BE3772E42D21C102004ED2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE7176952D26249C0087770F /* SpriteKit */,
 				BE2B77C52D246124008D8F04 /* MainViews */,
 				BE2B77C42D246112008D8F04 /* CellViews */,
 			);
@@ -423,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3772D72D21C0E9004ED2A2 /* KekSepetiApp.swift in Sources */,
+				BE02341E2D2C990C005795B7 /* ProfileView.swift in Sources */,
 				BE0C33A72D259F87001D16C8 /* AboutView.swift in Sources */,
 				BE71768E2D261FA10087770F /* SnowView.swift in Sources */,
 				BE8F5EBE2D23077300FE45EA /* StoreView.swift in Sources */,
@@ -430,6 +454,7 @@
 				BE0C33982D258AF2001D16C8 /* UserCellView.swift in Sources */,
 				BE8F5EC02D2308A200FE45EA /* Store.swift in Sources */,
 				BE7176972D2634810087770F /* RatingView.swift in Sources */,
+				BE0234252D2CB095005795B7 /* OrderTrackingController.swift in Sources */,
 				BE8F5ECC2D2322EB00FE45EA /* BucketView.swift in Sources */,
 				BE37A2AD2D2B117500940599 /* Address.swift in Sources */,
 				BE8F5ECA2D23158B00FE45EA /* Bucket.swift in Sources */,
@@ -438,6 +463,7 @@
 				BE37A2AF2D2B18C100940599 /* AddressView.swift in Sources */,
 				BE3772E82D21C147004ED2A2 /* CheckOutView.swift in Sources */,
 				BE1468A22D2373AA00E0EBFB /* OrderTrackingView.swift in Sources */,
+				BE0234212D2CADFA005795B7 /* StoreListController.swift in Sources */,
 				BE8F5EC42D230B7E00FE45EA /* Stores.swift in Sources */,
 				BE8F5EC22D2309B800FE45EA /* Cake.swift in Sources */,
 				BE1468A42D2387B400E0EBFB /* StoreCellView.swift in Sources */,
@@ -446,6 +472,8 @@
 				BE0C33922D2581DB001D16C8 /* User.swift in Sources */,
 				BE8F5EC82D23122A00FE45EA /* StoreListView.swift in Sources */,
 				BE3772EE2D21D0C8004ED2A2 /* CakeCellView.swift in Sources */,
+				BE0234272D2CB134005795B7 /* AboutController.swift in Sources */,
+				BE0234232D2CAE90005795B7 /* CakeDetailController.swift in Sources */,
 				BEB790BC2D2760AE000F824C /* AddressMapView.swift in Sources */,
 				BE3772E62D21C112004ED2A2 /* NewAddressView.swift in Sources */,
 			);
