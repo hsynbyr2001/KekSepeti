@@ -14,57 +14,55 @@ struct AddressView: View {
     
     var body: some View {
         NavigationStack {
-            if profile.addresses.isEmpty {
-                ContentUnavailableView {
-                    Label("Adres yok", systemImage: "exclamationmark.bubble.fill")
-                } description: {
-                    Text("Yeni bir adres ekle")
-                } actions: {
-                    NavigationLink("Yeni Adres") {
-                        NewAddressView(profile: profile)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .accessibilityIdentifier("NewAddressButton")
-                }
-            }
-            else {
-                List {
-                    Section("Profil") {
-                        NavigationLink(destination: ProfileView(profile: profile)) {
-                            if profile.name == "" {
-                                Text("Profil Oluştur")
-                            } else {
-                                HStack {
-                                    ZStack {
-                                        Circle()
-                                            .frame(width: 100)
-                                            .foregroundColor(.gray)
-                                        if let uiImage = UIImage(data: profile.image) {
-                                            Image(uiImage: uiImage)
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 100)
-                                                .clipShape(.circle)
-                                        }
-                                    }
-                                    Text(profile.name)
-                                        .font(.title)
-                                        .bold()
-                                }
-                                .padding()
+            List {
+                Section("Profil") {
+                    NavigationLink(destination: ProfileView(profile: profile)) {
+                        if profile.name.isEmpty {
+                            ContentUnavailableView {
+                                Label("Profil yok", systemImage: "exclamationmark.bubble.fill")
+                            } description: {
+                                Text("Yeni bir profil oluştur")
                             }
+                        } else {
+                            HStack {
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 100)
+                                        .foregroundColor(.gray)
+                                    if let uiImage = UIImage(data: profile.image) {
+                                        Image(uiImage: uiImage)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 100)
+                                            .clipShape(.circle)
+                                    }
+                                }
+                                Text(profile.name)
+                                    .font(.title)
+                                    .bold()
+                            }
+                            .padding()
                         }
                     }
-                    Section("Kayıtlı Adreslerim") {
+                }
+                Section("Kayıtlı Adreslerim") {
+                    if !profile.addresses.isEmpty {
                         ForEach(profile.addresses.indices, id: \.self) { indexPath in
                             NavigationLink("\(profile.addresses[indexPath].area), \(profile.addresses[indexPath].city), \(profile.addresses[indexPath].zip)", destination: CheckoutView(bucket: bucket, profile: profile, addressIndex: indexPath))
                                 .accessibilityIdentifier("SelectAddress")
+                                .disabled(profile.name.isEmpty)
+                        }
+                    } else {
+                        ContentUnavailableView {
+                            Label("Adres yok", systemImage: "exclamationmark.bubble.fill")
+                        } description: {
+                            Text("Yeni bir adres ekle")
                         }
                     }
-                    Section("Yeni oluştur") {
-                        NavigationLink("Yeni Adres Ekle", destination: NewAddressView(profile: profile))
-                            .accessibilityIdentifier("NewAddressButton")
-                    }
+                }
+                Section("Yeni oluştur") {
+                    NavigationLink("Yeni Adres Ekle", destination: NewAddressView(profile: profile))
+                        .accessibilityIdentifier("NewAddressButton")
                 }
             }
         }

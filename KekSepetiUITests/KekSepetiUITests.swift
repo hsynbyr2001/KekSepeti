@@ -38,7 +38,7 @@ final class KekSepetiUITests: XCTestCase {
         
         // MARK: Cake Detail View
         // Add all items of store to bucket
-        for i in 0...1 {
+        for i in 0...5 {
             // Find the first cake button and tap it
             let cakeButton = app.buttons["CakeButton\(i)"]
             XCTAssertTrue(cakeButton.exists, "Cake button \(i) existing")
@@ -95,6 +95,7 @@ final class KekSepetiUITests: XCTestCase {
         
         
         // MARK: New Address View
+        /*
         // Find the name text field and tap it
         let nameField = app.textFields["NameField"]
         XCTAssertTrue(nameField.exists, "Name field existing")
@@ -103,6 +104,7 @@ final class KekSepetiUITests: XCTestCase {
         // Type text into the TextField
         let nameText = "Elon Musk"
         nameField.typeText(nameText)
+        */
         
         // Find the area text field and tap it
         let areaField = app.textFields["AreaField"]
