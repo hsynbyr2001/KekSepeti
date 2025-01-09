@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StoreListView: View {
     
+    @Environment(\.scenePhase) var scenePhase
+    
     @State private var bucket = Bucket(products: [])
     @State var profile = Profile()
     
@@ -32,7 +34,7 @@ struct StoreListView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink(destination: BucketView(bucket: bucket, profile: profile)) {
-                            Text("🛒 \(bucket.products.count)")
+                            Text("🛒 \(bucket.allProducts().count)")
                                 .font(.headline)
                                 .bold()
                                 .padding(6)
@@ -46,6 +48,14 @@ struct StoreListView: View {
                 }
                 SnowView()
                     .allowsHitTesting(false)
+            }
+        }
+        .onChange(of: scenePhase) { oldPhase, newPhase in
+            switch newPhase {
+            case .active: print("active")
+            case .inactive: print("inactive")
+            case .background: print("background")
+            default: break
             }
         }
     }

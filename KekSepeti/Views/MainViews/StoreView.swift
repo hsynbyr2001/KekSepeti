@@ -51,7 +51,7 @@ struct StoreView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: BucketView(bucket: bucket, profile: profile)) {
-                        Text("🛒 \(bucket.products.count)")
+                        Text("🛒 \(bucket.allProducts().count)")
                             .font(.headline)
                             .bold()
                             .padding(6)

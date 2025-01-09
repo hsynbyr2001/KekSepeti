@@ -11,7 +11,7 @@ extension CakeDetailView {
         var isContaining = isItemAlreadyInBucket()
         
         if !isContaining {
-            bucket.products.append(cake)
+            bucket.addProduct(cake)
             print("Ürün sepete eklendi.")
         }
         dismiss()
@@ -19,9 +19,9 @@ extension CakeDetailView {
     
     func isItemAlreadyInBucket() -> Bool {
         
-        for (index, product) in bucket.products.enumerated() {
+        for (index, product) in bucket.allProducts().enumerated() {
             if product.type == cake.type {
-                bucket.products[index] = cake
+                bucket.updateProduct(of: index, with: cake)
                 print("Ürün zaten sepete eklenmiş. Ürün güncellendi.")
                 return true
             }

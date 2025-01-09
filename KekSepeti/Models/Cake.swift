@@ -16,7 +16,7 @@ class Cake {
     var desc: String
     
     static let types = ["🍦 Vanilyalı", "🥮 Tarçınlı", "🌈 Gökkuşağı", "🍒 Vişneli", "🌰 Fındıklı",
-                        "🍓 Çilekli", "🍫 Çikolatalı", "🍌 Muzlu", "🍊Portakallı", "🥭 Mangolu",
+                        "🍓 Çilekli", "🍫 Çikolatalı", "🍌 Muzlu", "🍊 Portakallı", "🥭 Mangolu",
                         "🥥 Coco", "🫐 Böğürtlenli", "🍍 Ananaslı",  "🍋 Limonlu", "🍏 Elmalı", "🥜 Fıstıklı"
     ]
     

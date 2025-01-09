@@ -19,15 +19,15 @@ struct CheckoutView: View {
     
     var body: some View {
         
-        let canOrder = NSDecimalNumber(decimal: bucket.total).floatValue >= minimumTotal ? true : false
+        let canOrder = NSDecimalNumber(decimal: bucket.allTotal()).floatValue >= minimumTotal ? true : false
         
         NavigationStack{
             Form {
-                ForEach(bucket.products.indices, id: \.self) { indexPath in
+                ForEach(bucket.allProducts().indices, id: \.self) { indexPath in
                     Section {
                         AsyncImage(url: URL(string: "https://www.hackingwithswift.com/samples/img/cupcakes@3x.jpg"), scale: 3)
                             .frame(height: 35)
-                        CakeCellView(cake: bucket.products[indexPath])
+                        CakeCellView(cake: bucket.product(at: indexPath))
                     }
                 }
                 Section("Teslimat Bilgileri") {
@@ -48,7 +48,7 @@ struct CheckoutView: View {
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                         .padding(0)
-                    Text("\(bucket.total, format: .currency(code: "TRY"))")
+                    Text("\(bucket.allTotal(), format: .currency(code: "TRY"))")
                         .font(.title)
                 }
                 Section {
